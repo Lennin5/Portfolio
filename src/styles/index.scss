@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Chivo Mono', monospace !important;
+  // background: linear-gradient(to right, white 50%, black 50%) !important;
 }
 
 // Progress-bar component 
@@ -10,101 +11,232 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 10px;
+  height: 5px;
   background: rgb(255, 255, 255) !important;
   transform-origin: 0%;
 }
 
-  
 
-  /* // .container-x {
-  //   margin: 0 auto;
-  //   width: 250px;
-  //   height: 200px;
-  //   position: relative;
-  //   perspective: 1000px;
-  // }
-  
-  // .carousel {
-  //   height: 100%;
-  //   width: 100%;
-  //   position: absolute;
-  //   transform-style: preserve-3d;
-  //   transition: transform 1s;
-  // }
-  // .carousel div {
-  //   transform-style: preserve-3d;
-    
-  // }
-  
-  // .item-x {
-  //   display: block;
-  //   position: absolute;
-  //   background: #000;
-  //   width: 250px;
-  //   height: 200px;
-  //   line-height: 200px;
-  //   font-size: 5em;
-  //   text-align: center;
-  //   color: #FFF;
-  //   opacity: 0.95;
-  //   border-radius: 10px;
-  //   transition: transform 1s;
-  // }
-  
-  // .a {
-  //   transform: rotateY(0deg) translateZ(250px);
-  // }
-  // .a .item {
-  //   background: #ed1c24;
-  // }
-  // .b {
-  //   transform: rotateY(60deg) translateZ(250px) rotateY(-60deg);
-  // }
-  // .b .item {
-  //   background: #0072bc;
-  // }
-  // .c {
-  //   transform: rotateY(120deg) translateZ(250px)  rotateY(-120deg);
-  // }
-  // .c .item {
-  //   background: #39b54a;
-  // }
-  // .d {
-  //   transform: rotateY(180deg) translateZ(250px) rotateY(-180deg);
-  // }
-  // .d .item {
-  //   background: #f26522;
-  // }
-  // .e {
-  //   transform: rotateY(240deg) translateZ(250px) rotateY(-240deg);
-  // } 
-  // .e .item {
-  //   background: #630460;
-  // }
-  // .f {
-  //   transform: rotateY(300deg) translateZ(250px) rotateY(-300deg);
-  // }
-  // .f .item {
-  //   background: #8c6239;
-  // }
-  
-  // .next, .prev {
-  //   color: #444;
-  //   position: absolute;
-  //   top: 100px;
-  //   padding: 1em 2em;
-  //   cursor: pointer;
-  //   background: #CCC;
-  //   border-radius: 5px;
-  //   border-top: 1px solid #FFF;
-  //   box-shadow: 0 5px 0 #999;
-  //   transition: box-shadow 0.1s, top 0.1s;
-  // }
-  // .next:hover, .prev:hover { color: #000; }
-  // .next:active, .prev:active {
-  //   top: 104px;
-  //   box-shadow: 0 1px 0 #999;
-  // }
-  // .next { right: 5em; }
-  // .prev { left: 5em; } */
+.container{
+  // border: 1px solid red;
+  width: 100%;
+}
+
+.container-x {
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;  
+}
+
+.carousel div {
+  transform-style: preserve-3d;
+}
+
+.item-x {
+  display: block;
+  position: absolute;
+  background: #000;
+  width: 100%;
+  height: 400px;
+  line-height: 200px;
+  font-size: 5em;
+  text-align: center;
+  color: #FFF;
+  opacity: 0.95;
+  border-radius: 20px;
+  transition: transform 1s;  
+}
+
+.a {
+  transform: rotateY(0deg) translateZ(250px) rotateY(0deg);
+}
+
+.a .item-x {
+  width: 100%;
+  height: 400px;  
+  background: transparent;
+  object-fit: cover;  
+}
+
+.b {
+  transform: rotateY(90deg) translateZ(250px) rotateY(-90deg);
+}
+
+.b .item-x {
+  width: 100%;
+  height: 400px;  
+  background: transparent;
+  object-fit: cover;
+}
+
+.c {
+  transform: rotateY(180deg) translateZ(250px) rotateY(-180deg);
+}
+
+.c .item-x {
+  background: #39b54a;
+}
+
+.d {
+  transform: rotateY(270deg) translateZ(250px) rotateY(-270deg);
+}
+
+.d .item-x {
+  background: #f26522;
+}
+
+// .next,
+// .prev {
+//   color: #444;
+//   top: 100px;
+//   padding: 1em 2em;
+//   cursor: pointer;
+//   background: #CCC;
+//   border-radius: 5px;
+//   border-top: 1px solid #FFF;
+//   box-shadow: 0 5px 0 #999;
+//   transition: box-shadow 0.1s, top 0.1s;
+// }
+
+// .next:hover,
+// .prev:hover {
+//   color: #000;
+// }
+
+// .next:active,
+// .prev:active {
+//   top: 104px;
+//   box-shadow: 0 1px 0 #999;
+// }
+
+// .next {
+//   right: 5em;
+// }
+
+// .prev {
+//   left: 5em;
+// }
+
+
+.btn-circle {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  font-size: 30px;
+  // line-height: 1.33;
+  border-radius: 50px;
+}
+
+
+/* Container holding the image and the text */
+.co {
+  // position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+
+.access-card{
+  // transition: transform 0.7s; /* establece una transición suave para la transformación */
+}
+
+.access-card:hover {
+  // transform: scale(2.0); /* establece la perspectiva y rota el div hacia la derecha */
+}
+
+
+.sectionn{
+  // border: 1px solid red;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+}
+
+.legend-platform-text{
+  font-size: large !important;
+  background-color: #000 !important;
+  line-height: 0 !important;
+  width: 100% !important;
+  margin-top: 50px !important;
+}
+
+
+
+
+.layer {
+  position: absolute; /* para posicionar los elementos dentro de .parallax */
+  width: 100%; /* ancho al 100% para que ocupen toda la sección */
+  height: 100%; /* altura al 100% para que ocupen toda la sección */
+  background-size: cover; /* para que la imagen de fondo se ajuste al tamaño del elemento */
+}
+
+.layer1 {
+  transform: translateY(-50px); /* movimiento hacia arriba */
+  animation: parallax1 10s linear infinite; /* animación de movimiento */
+
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.layer2 {
+  transform: translateY(100px); /* movimiento hacia arriba */
+  animation: parallax2 5s linear infinite; /* animación de movimiento */
+
+  animation-direction: alternate;
+  animation-iteration-count: infinite;    
+}
+
+.layer3 {
+  transform: translateY(-150px); /* movimiento hacia arriba */
+  animation: parallax3 10s linear infinite; /* animación de movimiento */
+
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.layer4 {
+  transform: translateY(-200px); /* movimiento hacia arriba */
+  animation: parallax4 10s linear infinite; /* animación de movimiento */
+
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+/* Animaciones de movimiento */
+@keyframes parallax1 {
+  0% { transform: translateY(-30px); }
+  100% { transform: translateY(30px); }
+}
+
+@keyframes parallax2 {
+  0% { transform: translateY(60px);  }
+  100% { transform: translateY(-60px); }
+}
+
+@keyframes parallax3 {
+  0% { transform: translateY(-80px);  }
+  100% { transform: translateY(80px); }
+}
+
+@keyframes parallax4 {
+  0% { transform: translateY(-200px); }
+  100% { transform: translateY(200px); }
+}

@@ -3,7 +3,7 @@ import i18next from 'i18next';
 import { useTranslation } from "react-i18next";
 
 // import ProgressBar from './ProgressBar';
-import Bar from './Bar'
+import ProgressBar from './Bar'
 import LogoDark from '../assets/img/lennin-logo-black.png';
 import LogoLight from '../assets/img/lennin-logo-white.png';
 import EnglandFlag from '../assets/img/flags/England.png';
@@ -19,14 +19,12 @@ const Header = (props) => {
     var elements = document.getElementsByClassName('nav-scroll-animated');
     var navLink = document.getElementsByClassName('nav-link');
     var logoImg = document.getElementById('logo');
-    console.log(document.body.scrollTop);
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {      
       for(var i = 0; i < elements.length; i++){
         elements[i].style.backgroundColor = "#000";
         navLink[i].classList.add("text-white");
         navLink[i].classList.remove("text-black");
         logoImg.src = LogoLight;
-        console.log("A");
       }
     } else {
       for(var i = 0; i < elements.length; i++){
@@ -34,7 +32,6 @@ const Header = (props) => {
         navLink[i].classList.add("text-black");
         navLink[i].classList.remove("text-white");
         logoImg.src = LogoDark;
-        console.log("B");
       }
     }
   }
@@ -66,10 +63,10 @@ const Header = (props) => {
     d-none d-sm-block
     d-sm-none d-md-block
     d-md-none d-lg-block" id="nav-desktop">
-    <Bar />
+    <ProgressBar />
     <div className="container-fluid pb-2">
       <a href={IsMainView ? '#homepage' : '/'} onClick={closeModal}>
-        <img src={LogoDark} style={{marginLeft:30}} alt="Logo" width="150" height="150" className="d-inline-block align-text-top img-fluid" id="logo"  />        
+        <img src={LogoDark} style={{marginLeft:30}} alt="Logo" width="100" height="100" className="d-inline-block align-text-top img-fluid" id="logo"  />        
       </a>        
         
         <div className="collapse navbar-collapse" id="navbarText">
@@ -115,7 +112,7 @@ const Header = (props) => {
     d-lg-none d-xl-block
     d-xl-none
     d-ProgressBarl-none d-ProgressBarl-block" style={{backgroundColor: 'transparent'}}>
-    <Bar />
+    <ProgressBar />
       <div className="container-fluid">
         <div className="d-flex align-items-center">
           <div>
@@ -184,10 +181,3 @@ const Header = (props) => {
 
 export default Header
 
-// import React from 'react'
-
-// export default function Header() {
-//   return (
-//     <div>Header</div>
-//   )
-// }
