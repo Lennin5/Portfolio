@@ -45,14 +45,13 @@ body {
 .item-x {
   display: block;
   position: absolute;
-  background: #000;
+  // background: #000;
   width: 100%;
   height: 400px;
-  line-height: 200px;
-  font-size: 5em;
+  font-size: 6em;
   text-align: center;
   color: #FFF;
-  opacity: 0.95;
+  opacity: 0.97;
   border-radius: 20px;
   transition: transform 1s;  
 }
@@ -84,7 +83,10 @@ body {
 }
 
 .c .item-x {
-  background: #39b54a;
+  width: 100%;
+  height: 400px;  
+  background: transparent;
+  object-fit: cover;
 }
 
 .d {
@@ -92,7 +94,10 @@ body {
 }
 
 .d .item-x {
-  background: #f26522;
+  width: 100%;
+  height: 400px;  
+  background: transparent;
+  object-fit: cover;
 }
 
 // .next,
@@ -136,6 +141,24 @@ body {
   // line-height: 1.33;
   border-radius: 50px;
 }
+.buttons-0{
+  background: #000;
+  transition: 0.5s;
+}
+.buttons-1{
+  background-color: #39ceb0;
+  transition: 0.5s;
+}
+.buttons-2{
+  background-color: #e20084;  
+  transition: 0.5s;
+}
+.buttons-3{
+  background-color: #00d4efde;  
+  transition: 0.5s;
+}
+
+
 
 
 /* Container holding the image and the text */
@@ -153,13 +176,6 @@ body {
 }
 
 
-.access-card{
-  // transition: transform 0.7s; /* establece una transición suave para la transformación */
-}
-
-.access-card:hover {
-  // transform: scale(2.0); /* establece la perspectiva y rota el div hacia la derecha */
-}
 
 
 .sectionn{
@@ -170,15 +186,26 @@ body {
   background-position: center !important;
 }
 
-.legend-platform-text{
-  font-size: large !important;
-  background-color: #000 !important;
-  line-height: 0 !important;
-  width: 100% !important;
-  margin-top: 50px !important;
+
+.cards-text{
+  font-size: large;  
+  line-height: 0 ;
+  width: 100% ;
+  margin-top: 50px ;
 }
-
-
+.legend-platform-text{
+  @extend .cards-text;
+  background-color: #000 ;
+}
+.formation-text{
+  @extend .cards-text;
+}
+.experience-text{
+  @extend .cards-text;
+}
+.contact-text{
+  @extend .cards-text;
+}
 
 
 .layer {
@@ -190,7 +217,7 @@ body {
 
 .layer1 {
   transform: translateY(-50px); /* movimiento hacia arriba */
-  animation: parallax1 10s linear infinite; /* animación de movimiento */
+  // animation: parallax1 10s linear infinite; /* animación de movimiento */
 
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -222,21 +249,21 @@ body {
 
 /* Animaciones de movimiento */
 @keyframes parallax1 {
-  0% { transform: translateY(-30px); }
-  100% { transform: translateY(30px); }
+  0% { transform: translateY(-40px); }
+  100% { transform: translateY(40px); }
 }
 
 @keyframes parallax2 {
-  0% { transform: translateY(60px);  }
-  100% { transform: translateY(-60px); }
+  0% { transform: translateY(50px);  }
+  100% { transform: translateY(-50px); }
 }
 
 @keyframes parallax3 {
-  0% { transform: translateY(-80px);  }
-  100% { transform: translateY(80px); }
+  0% { transform: translateY(-40px);  }
+  100% { transform: translateY(40px); }
 }
 
 @keyframes parallax4 {
-  0% { transform: translateY(-200px); }
-  100% { transform: translateY(200px); }
+  0% { transform: translateY(-60px); }
+  100% { transform: translateY(60px); }
 }

@@ -45,6 +45,8 @@ window.onload = function() {
   $(".next").on("click", { d: "n" }, rotate);
   $(".prev").on("click", { d: "p" }, rotate);
 
+  // 
+
   function rotate(e){
     if(e.data.d=="n"){
       currdeg = currdeg - 90;

@@ -23,7 +23,7 @@ export default function HomeRoute() {
   
   return (
     <div className="line">
-      <br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br />
 
       <Carousel />  
 
