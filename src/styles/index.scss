@@ -12,6 +12,10 @@ body {
   transition: 1s;
 }
 
+.shadowing{
+  text-shadow: 0 0 13px #3c3c3c;
+}
+
 // Progress-bar component 
 .progress-bar {
   position: fixed;
@@ -290,3 +294,31 @@ body {
 }
 
 
+
+.icon-item > div {
+  transition: 1s;
+}
+.icon-item > div * {
+  transition: 1s;
+}
+
+.icon-item:hover > div > i{
+  box-shadow: 0 0 0 0.2rem #fff;
+  transition: 1s;
+}
+.icon-item:hover > div > div > span {
+  font-size: 1.5rem !important;
+  transition: 1s;
+}
+.icon-item:hover > div > div > p {
+  font-size: 1.5rem !important;
+  transition: 1s;
+}
+
+
+.education-logo{
+  width: 100% !important;
+  height: 7rem;
+  object-fit: contain;
+  // border: 1px solid red;
+}

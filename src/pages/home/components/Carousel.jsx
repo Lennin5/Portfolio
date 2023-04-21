@@ -3,9 +3,15 @@ import TypeIt from "typeit-react";
 import '../../../hooks/init.js'
 
 import Profile from '../../../assets/img/be-happy.png';
-import Experience from '../../../assets/img/experience.png';
 import Education from '../../../assets/img/education.png';
+import Experience from '../../../assets/img/experience.png';
 import Contact from '../../../assets/img/contact.png';
+
+import ProfileSection from './Profile.jsx'
+import EducationSection from './Education.jsx'
+import ExperienceSection from './Experience.jsx'
+import ContactSection from './Contact.jsx'
+
 
 export default function Carousel(){
 
@@ -37,16 +43,13 @@ export default function Carousel(){
     };  
 
     function ChangeGrayColors(index) {
-      // if(currentIndexImageColor === 0){
-      //   document.getElementById("education-img").style.background = EducationGray;
-      // }else{
-      //   document.getElementById("education-img").style.background = Education;
-      // }
       let imageNumber = index;
       document.getElementById("education-img").style.filter = imageNumber === 0 ? `grayscale(100%)` : `grayscale(0%)`;
       document.getElementById("contact-img").style.filter = imageNumber === 0 ? `grayscale(100%)` : `grayscale(0%)`;
 
-      document.body.style.backgroundColor = imageNumber === 0 ? `black` : `white`;
+      document.body.style.background = imageNumber === 0 && `linear-gradient(180deg, #000 0%, #000 50%)`;
+      document.body.style.background = imageNumber === 1 && `linear-gradient(180deg, #19c19f 0%, #442A98 70%)`;
+      document.body.style.background = imageNumber === 2 && `linear-gradient(180deg, #871095 0%, #a32671 50%)`;
     };
     
 
@@ -166,111 +169,13 @@ export default function Carousel(){
     </div>
     <br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br />
-    {/* <div className="next">Next</div>
-    <div className="prev">Prev</div> */}
 
-    <div className="container mb-10">
-      <div className="row text-center">
-        <div className="col-12">
-          <span className="fs-3 animate text-white">Me considero un desarrollador web disruptivo en la creación de experiencias digitales atractivas, intuitivas y efectivas, mi lema: <br /> "Piensa en todo, ah! y una cosa más" :)</span>
-        </div>       
-      </div>
-    </div>
-    {/* <div className="container">
-      <div className="row text-center">
-        <div className="col-12">
-          <p className="fs-2 fw-bolder">Información Personal</p>
-        </div>       
-      </div>
-    </div> */}
-    <div className="container mt-5">
-      <div className="row">
-      <div className="col-12">
-          <div className="container">
-            <div className="card-body">
-              <div className="row d-flex justify-content-center">
-                <div className='col-12'>
-                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5">
-                        <i className="fa-solid fa-user btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
-                        <div className="row d-flex justify-content-start" style={{lineHeight: 1.0}}>
-                          <span className="fs-6 text-gray-800">Nombre</span>
-                          <span className="text-white">
-                            Lennin Josué <br className="d-block d-sm-none" /> Lemus Díaz
-                          </span>
-                        </div>
-                    </div>     
-                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5">
-                        <i className="fa-solid fa-user-tag btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
-                        <div className="d-flex justify-content-center">
-                          <div className="row d-flex justify-content-start" style={{lineHeight: 1.0}}>
-                            <span className="fs-6 text-gray-800">Edad</span>
-                            <span className="text-white">
-                              20 años
-                            </span>
-                          </div>
-                          {/* <div className="row d-flex justify-content-start" style={{lineHeight: 1.0}}>
-                            <span className="fs-6 text-gray-800">Estado Civil</span>
-                            <span className="text-white">
-                              Soltero
-                            </span>
-                          </div>                           */}
-                        </div>
-                    </div>  
-                    {/* <div className="fs-5 d-flex align-items-center justify-content-start text-left mb-5">
-                        <i className="fa-solid fa-phone btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
-                        <div className="row d-flex justify-content-start" style={{lineHeight: 1.0}}>
-                          <span className="fs-6 text-gray-800">Teléfono</span>
-                          <span className="text-white">
-                            +503 7238 0568
-                          </span>
-                        </div>
-                    </div>                         */}
-                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5">
-                        <div className="column text-center">
-                          <i className="fa-solid fa-location-dot btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
-                          <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
-                          <span className="fs-6 text-gray-800 text-center">Dirección</span>
-                            <span className="text-white">
-                              BO. San Sebastián, 
-                              CL. Libertad  
-                              #12, <br />
-                              Sonsonate - Izalco
-                            </span>
-                        </div>                          
-                        </div>
-                    </div>                     
-                </div>
-                {/* <div className='col-12 col-lg-12'>
-                  <div className="row d-flex justify-content-center">
-                    <div className="col-12 col-lg-5 fs-5 d-flex align-items-center justify-content-center text-left mb-5">
-                        <i className="fa-solid fa-earth-america btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
-                        <div className="row d-flex justify-content-start" style={{lineHeight: 1.0}}>
-                          <span className="fs-6 text-gray-800">País</span>
-                          <span className="text-white">
-                            El Salvador
-                          </span>
-                        </div>
-                    </div>
-                    <div className="col-12 col-lg-5 fs-6 d-flex align-items-center justify-content-start text-left mb-5">
-                        <i className="fa-solid fa-location-dot btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
-                        <div className="row d-flex justify-content-start" style={{lineHeight: 1.0}}>
-                          <span className="fs-6 text-gray-800">Dirección</span>
-                          <span className="text-white">
-                            BO. San Sebastián, <br className="d-block d-sm-none" /> 
-                            CL. Libertad  <br />
-                            #12, Sonsonate, <br className="d-block d-sm-none" />
-                            Izalco <br /><br />
-                          </span>
-                        </div>
-                    </div> 
-                    </div>
-                </div> */}
-                </div>
-              </div>
-            </div>
-          </div>   
-        </div>
-      </div>
+    {
+      currentIndexImage === 0 ? <EducationSection /> 
+      : currentIndexImage === 1 ? <EducationSection /> 
+      : currentIndexImage === 2 ? <ExperienceSection /> 
+      : <ContactSection />
+    }
   </div>    
   )
 }

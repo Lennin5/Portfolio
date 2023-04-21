@@ -22,19 +22,11 @@ export default function HomeRoute() {
   
   
   return (
-    <div className="line">
-      <br /><br /><br /><br /><br />
-
-      <Carousel />  
-
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />      
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />      
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />      
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />      
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />      
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />      
-      
-
-    </div>
+    <>
+      {/* <br /><br /><br /><br /><br /> */}
+      <div className="mt-5">
+        <Carousel />  
+      </div>      
+    </>
   )
 }

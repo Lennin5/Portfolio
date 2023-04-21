@@ -24,13 +24,16 @@ $pink: #FD3468;
 $purple: #2D164A;
 $lila: #D2C4F3;
 $brown: #847282;
+$mint: #19c19f;
+
+$x: #a32671;
 
 $pink-dark: #CA4C63;
 $purple-dark: #25183D;
 $lila-dark: #A192D3;
 $brown-dark: #423941;
 
-$purple-light: #573E76;
+$purple-light: #442A98;
 $purple-blue: #8370b2;
 
 $colors: (
@@ -41,6 +44,7 @@ $colors: (
     "purple-light": $purple-light,
     "purple-blue": $purple-blue,
     "gray": $gray-500,
+    "mint": $mint,  
     // lila.
     "lila": $lila,
     "lila-black": $lila-dark,
@@ -55,7 +59,7 @@ $colors: (
     "gray-900": $gray-900,
 );
 
-$base-colors: "blue" "purple" "pink" "red" "orange" "yellow" "green" "gray" "lila";
+$base-colors: "blue" "purple" "pink" "red" "orange" "yellow" "green" "gray" "lila" "mint";
 
 // Theme colors
 // ============================================================================
@@ -216,6 +220,11 @@ $grid-breakpoints: (
     xxl: 1400px,
     hidpi: 192dpi
 );
+
+$box-shadow:                  0 .5rem 1rem rgba($white, .15);
+$box-shadow-sm:               0 .125rem .25rem rgba($white, .075);
+$box-shadow-lg:               0 1rem 3rem rgba($white, .175);
+$box-shadow-inset:            inset 0 1px 2px rgba($white, .075);
 
 // Bootstrap variables
 // ============================================================================
