@@ -70,33 +70,59 @@ window.onload = function() {
 
 
 
+  animateElements();
 
-  // const setProp = (el, prop, value) => el.style.setProperty(prop, value) 
-	
-  // const el =  document.getElementById('access-card')
+  const ASCII_OF_A = "A".charCodeAt();
+  const NO_OF_ALPHABETS = 26;
   
-  // const onMouseUpdate = e => {
-  //     let width = el.offsetWidth
-  //     let XRel = e.pageX - el.offsetLeft
-  //     let YRel = e.pageY - el.offsetTop
-    
-  //     let YAngle = -(0.1- (XRel / width)) * 10; 
-  //     let XAngle = (0.1- (YRel / width)) * 10;
-    
-  //     setProp(el, '--dy', `${YAngle}deg`)
-  //     setProp(el, '--dx', `${XAngle}deg`)
-  // }
+  function animateElement(element, originalText, options) {
+      let iteration = 0;
   
-  // const resetProps = () => {
-  //   el.style.setProperty('--dy', '0')
-  //   el.style.setProperty('--dx', '0')
-  // }
+      if (options.interval) {
+          return;
+      }
   
+      options.interval = setInterval(() => {
+          const newWord = originalText
+              .split("")
+              .map((_, idx) => {
+                  if (idx < iteration) {
+                      return originalText[idx];
+                  }
+                  return String.fromCharCode(
+                      Math.trunc(Math.random() * NO_OF_ALPHABETS) + ASCII_OF_A
+                  );
+              })
+              .join("");
+          element.innerText = newWord;
   
-  // el.addEventListener('mousemove', onMouseUpdate, false)
-  // el.addEventListener('mouseenter', onMouseUpdate, false)
-  // el.addEventListener('mouseleave', resetProps, false)
-
+          iteration += 1;
+  
+          if (iteration > originalText.length) {
+              clearInterval(options.interval);
+              options.interval = null;
+          }
+      }, 50);
+  }
+  
+  function getRandomLetter() {}
+  
+  function animateElements() {
+      const elements = document.getElementsByClassName("animate");
+  
+      for (const element of elements) {
+          const originalText = element.innerText;
+          const options = {
+              interval: null
+          };
+          animateElement(element, originalText, options);
+  
+          element.addEventListener("mouseover", (event) => {
+              animateElement(event.target, originalText, options);
+          });
+      }
+  }
+  
   
 };
 

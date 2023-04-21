@@ -19,6 +19,7 @@ const Header = (props) => {
     var elements = document.getElementsByClassName('nav-scroll-animated');
     var navLink = document.getElementsByClassName('nav-link');
     var logoImg = document.getElementById('logo');
+    console.log(document.body.scrollTop);
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {      
       for(var i = 0; i < elements.length; i++){
         elements[i].style.backgroundColor = "#000";
@@ -71,11 +72,11 @@ const Header = (props) => {
         
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={{marginLeft:20}}>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link active text-black" aria-current="page" href="#homepage">
                     {lg("navbar.home-link")}
                 </a>
-              </li>
+              </li> */}
           </ul> 
         <span className="navbar-text text-white">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">

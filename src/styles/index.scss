@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
 
+// body {
+//   font-family: 'Chivo Mono', monospace !important;
+//   // background: linear-gradient(to right, white 50%, black 50%) !important;
+// }
+
 body {
   font-family: 'Chivo Mono', monospace !important;
-  // background: linear-gradient(to right, white 50%, black 50%) !important;
+  overflow-x: hidden;
+  padding: 2rem;
+  transition: 1s;
 }
 
 // Progress-bar component 
@@ -11,7 +18,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 5px;
+  height: 9px;
   background: rgb(255, 255, 255) !important;
   transform-origin: 0%;
 }
@@ -142,24 +149,36 @@ body {
   border-radius: 50px;
 }
 .buttons-0{
-  background: #000;
+  color: #464646;
+  background: #fff;
   transition: 0.5s;
 }
 .buttons-1{
+  color: #fff;
   background-color: #39ceb0;
   transition: 0.5s;
 }
 .buttons-2{
+  color: #fff;
   background-color: #e20084;  
   transition: 0.5s;
 }
 .buttons-3{
+  color: #fff;
   background-color: #00d4efde;  
   transition: 0.5s;
 }
 
 
-
+.btn-round {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  border: none;
+  outline: none;
+}
 
 /* Container holding the image and the text */
 .co {
@@ -184,6 +203,8 @@ body {
   background-size: cover !important;
   background-attachment: fixed !important;
   background-position: center !important;
+  // box-shadow: 0 0.8rem 1rem hsl(220, 7.32%, 91.96%);
+  transition: 1s;
 }
 
 
@@ -267,3 +288,5 @@ body {
   0% { transform: translateY(-60px); }
   100% { transform: translateY(60px); }
 }
+
+
