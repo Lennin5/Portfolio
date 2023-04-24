@@ -19,20 +19,20 @@ const Header = (props) => {
     var elements = document.getElementsByClassName('nav-scroll-animated');
     var navLink = document.getElementsByClassName('nav-link');
     var logoImg = document.getElementById('logo');
-    console.log(document.body.scrollTop);
+    // console.log(document.body.scrollTop);
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {      
       for(var i = 0; i < elements.length; i++){
-        elements[i].style.backgroundColor = "#000";
-        navLink[i].classList.add("text-white");
-        navLink[i].classList.remove("text-black");
-        logoImg.src = LogoLight;
+        // elements[i].style.backgroundColor = "#000";
+        // navLink[i].classList.add("text-white");
+        // navLink[i].classList.remove("text-black");
+        // logoImg.src = LogoLight;
       }
     } else {
       for(var i = 0; i < elements.length; i++){
-        elements[i].style.backgroundColor = "transparent";
-        navLink[i].classList.add("text-black");
-        navLink[i].classList.remove("text-white");
-        logoImg.src = LogoDark;
+        // elements[i].style.backgroundColor = "transparent";
+        // navLink[i].classList.add("text-black");
+        // navLink[i].classList.remove("text-white");
+        // logoImg.src = LogoDark;
       }
     }
   }
@@ -67,7 +67,7 @@ const Header = (props) => {
     <ProgressBar />
     <div className="container-fluid pb-2">
       <a href={IsMainView ? '#homepage' : '/'} onClick={closeModal}>
-        <img src={LogoDark} style={{marginLeft:30}} alt="Logo" width="100" height="100" className="d-inline-block align-text-top img-fluid" id="logo"  />        
+        {/* <img src={LogoDark} style={{marginLeft:30}} alt="Logo" width="100" height="100" className="d-inline-block align-text-top img-fluid" id="logo"  />         */}
       </a>        
         
         <div className="collapse navbar-collapse" id="navbarText">
@@ -83,15 +83,15 @@ const Header = (props) => {
             <ul className="navbar-nav" style={{marginRight:50}}>
               <li className="nav-item dropdown dropstart">
                 <a className="nav-link dropdown-toggle text-white d-flex align-items-center" 
-                href="##" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                href="##" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{textShadow: `0 0 13px #000`}}>
                   {language === 'es' ? "Español" : "English"}
                   {/* {
                     language === 'es' ? (<img src={SpainFlag} className="flag" alt="Spanish" />)
                     : (<img src={EnglandFlag} className="flag" alt="English Flag" />)
                   }          */}
-                  <i className="fa-solid fa-globe" style={{marginLeft:10}}></i>         
+                  <i className="fa-solid fa-globe" style={{marginLeft:10, textShadow: `0 0 13px #000`}}></i>         
                 </a>
-                <ul className="dropdown-menu dropdown-menu-lightr">
+                <ul className="dropdown-menu dropdown-menu-light">
                   <li>
                     <a className="dropdown-item" href="#es" onClick={() =>changeLanguage('es')}>
                      <img src={SpainFlag} style={{width: 20}} alt="Español" /> Español</a>
@@ -112,7 +112,7 @@ const Header = (props) => {
     <nav className="navbar navbar-dark fixed-top pt-3 nav-scroll-animated 
     d-lg-none d-xl-block
     d-xl-none
-    d-ProgressBarl-none d-ProgressBarl-block" style={{backgroundColor: 'transparent'}}>
+    d-ProgressBarl-none d-ProgressBarl-block d-none" style={{backgroundColor: 'transparent'}}>
     <ProgressBar />
       <div className="container-fluid">
         <div className="d-flex align-items-center">

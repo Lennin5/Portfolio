@@ -121,9 +121,21 @@ window.onload = function() {
               animateElement(event.target, originalText, options);
           });
       }
-  }
-  
-  
+  }  
+
+  // Pasar a la siguiente seccion del carrusel con las flechas del teclado
+  window.addEventListener("keydown", function(event) {
+    var prev_carousel_item = document.getElementById("prev-carousel-item");
+    var next_carousel_item = document.getElementById("next-carousel-item");
+
+    if (event.key === "ArrowLeft") { // Flecha izquierda
+        prev_carousel_item.click();
+    }
+    else if (event.key === "ArrowRight") { // Flecha derecha
+        next_carousel_item.click();
+    }
+  });  
+
 };
 
 

@@ -6,7 +6,7 @@ export function useMediaXs() {
 }
 
 export function useMediaSm() {
-    return useMediaQuery({ query: "(min-width: 576px)" });
+    return useMediaQuery({ query: "(max-width: 576px)" });
 }
 
 export function useMediaMd() {

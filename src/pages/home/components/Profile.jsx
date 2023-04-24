@@ -19,7 +19,7 @@ export default function Profile() {
                         <div className="column text-center">
                           <i className="fa-solid fa-user fa-user-icon btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                           <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
-                            <span className="fs-6 text-gray-800 text-center">Nombre</span>
+                            <span className="fs-6 text-gray-600 text-center">Nombre</span>
                             <p className="text-white">
                               Lennin Josué Lemus Díaz
                             </p>
@@ -31,7 +31,7 @@ export default function Profile() {
                         <div className="column text-center">
                           <i className="fa-solid fa-user-tag btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                           <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
-                          <span className="fs-6 text-gray-800 text-center">Edad</span>
+                          <span className="fs-6 text-gray-600 text-center">Edad</span>
                             <span className="text-white">
                               23 años
                             </span>
@@ -45,7 +45,7 @@ export default function Profile() {
                           <div className="column text-center">
                             <i className="fa-solid fa-location-dot btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                             <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
-                            <span className="fs-6 text-gray-800 text-center">Dirección</span>
+                            <span className="fs-6 text-gray-600 text-center">Dirección</span>
                               <span className="text-white">
                                 BO. San Sebastián, 
                                 CL. Libertad  
@@ -60,7 +60,7 @@ export default function Profile() {
                           <div className="column text-center">
                             <i className="fa-solid fa-earth-americas btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                             <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
-                            <span className="fs-6 text-gray-800 text-center">País</span>
+                            <span className="fs-6 text-gray-600 text-center">País</span>
                               <span className="text-white">
                                 El Salvador
                               </span>
@@ -74,7 +74,7 @@ export default function Profile() {
                           <div className="column text-center">
                             <i className="fa-solid fa-phone btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                             <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
-                            <span className="fs-6 text-gray-800 text-center">Teléfono</span>
+                            <span className="fs-6 text-gray-600 text-center">Teléfono</span>
                               <span className="text-white">
                                 +503 7238 0568
                               </span>

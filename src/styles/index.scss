@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
 
-// body {
-//   font-family: 'Chivo Mono', monospace !important;
-//   // background: linear-gradient(to right, white 50%, black 50%) !important;
-// }
 
 body {
-  font-family: 'Chivo Mono', monospace !important;
-  overflow-x: hidden;
+  font-family: 'Chivo Mono', monospace !important;  
   padding: 2rem;
-  transition: 1s;
+}
+html, body {
+  overflow-x: hidden !important;
 }
 
 .shadowing{
@@ -28,10 +25,10 @@ body {
 }
 
 
-.container{
-  // border: 1px solid red;
-  width: 100%;
-}
+// .container{
+//   // border: 1px solid red;
+//   width: 100%;
+// }
 
 .container-x {
   margin: 0 auto;
@@ -164,7 +161,7 @@ body {
 }
 .buttons-2{
   color: #fff;
-  background-color: #e20084;  
+  background-color: #780193;  
   transition: 0.5s;
 }
 .buttons-3{
@@ -321,4 +318,180 @@ body {
   height: 7rem;
   object-fit: contain;
   // border: 1px solid red;
+}
+
+.technology-logo{
+  width: 100% !important;
+  height: 10rem;
+  object-fit: contain;
+}
+
+
+
+.card-project {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+
+.card-project .parallax-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translateZ(0);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.card-project .parallax-effect:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.card-project:hover .parallax-effect:before {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+// RobotViewer section
+model-viewer {
+  --progress-bar-color: transparent;  
+}
+.robot-container{
+  height: 300px;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.robot{
+  background-color: transparent !important;
+  width: 180px;
+  height: 180px;
+  top: -10px;
+}
+.robot-small{
+  background-color: transparent !important;
+  width: 160px;
+  height: 160px;
+  top: -10px;
+}
+.robot-selected{
+  scale: 0.9;
+  transition: all 0.4s ease-in-out;
+}
+
+.horizontal-scroll-container-of-small-robots {
+  max-width: 100vw;
+  overflow-x: scroll;
+  position: relative;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+
+.horizontal-scroll-container-of-small-robots::-webkit-scrollbar {
+height: 7px;    
+}  
+
+.horizontal-scroll-container-of-small-robots::-webkit-scrollbar-thumb {
+background-color: rgb(159, 107, 250);
+border-radius: 10px;
+}
+
+.horizontal-row-robots {
+display: flex;
+}
+
+// Fullscreen Robotpreview section
+.robot-preview-fullscreen-modal {
+  padding-top: 10px !important;    
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.552);    
+}
+.robot-preview-container-fullscreen{
+  width: 100%;
+  height: 100%;
+}
+.robot-preview-container-content {    
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;    
+
+  width: 100%;
+  height: 99%;
+  border-color: #d2a3ff;
+  border-style: double;
+  border-radius: 10px;
+}
+.robot-preview-close-btn {
+  color: #fff;
+  background-color: transparent;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;    
+  padding-right: 20px;
+  z-index: 100;
+}
+
+.robot-preview-close-btn:hover,
+.robot-preview-close-btn:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fullscreen-icon{
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: -10px;
+  padding: 5px;
+  z-index: 100;
+  text-shadow: 0px 0px 10px #000;    
+}
+
+
+
+
+
+
+
+
+.ac-img{
+  object-fit: cover;
+  transition: all 0.4s ease-in-out;
+}
+
+.ac-img:hover {
+  transform: scale(1.2);
+  transition: all 0.4s ease-in-out;
 }

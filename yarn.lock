@@ -8365,6 +8365,11 @@ react-meta-tags@1.0.1:
   resolved "https://registry.yarnpkg.com/react-meta-tags/-/react-meta-tags-1.0.1.tgz#be18e88adafca280d6bd12839b530f9cfb7edbab"
   integrity sha512-uylBI9UOI0QCGDsl6PlZaHnp+MxEpwslTlicPjnlcD68I8Kl2hdbuAZBRih+yU5StArSMB6T0jBrgst6rAuDYQ==
 
+react-parallax@3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-3.1.2.tgz#789fa6d70452507a6d9a43d495d3459038eeb028"
+  integrity sha512-V4VmFh7JeYNX6rRFv/SNC1XKhsAn+3Ny8a/1rp+xgQ0SBF1zsTTUbhBxG7XNem89A06NVe3R5l6m9r5S2RRHxg==
+
 react-refresh@^0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"

@@ -20,7 +20,7 @@ export default function VerticalLayout() {
                 <Outlet />
                 <ScrollRestoration />
             </main>
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }
