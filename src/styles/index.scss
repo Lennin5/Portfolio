@@ -247,7 +247,7 @@ html, body {
 
 .layer2 {
   transform: translateY(100px); /* movimiento hacia arriba */
-  animation: parallax2 5s linear infinite; /* animación de movimiento */
+  animation: parallax2 8s linear infinite; /* animación de movimiento */
 
   animation-direction: alternate;
   animation-iteration-count: infinite;    
@@ -263,7 +263,7 @@ html, body {
 
 .layer4 {
   transform: translateY(-200px); /* movimiento hacia arriba */
-  animation: parallax4 10s linear infinite; /* animación de movimiento */
+  animation: parallax4 8s linear infinite; /* animación de movimiento */
 
   animation-direction: alternate;
   animation-iteration-count: infinite;
@@ -286,8 +286,8 @@ html, body {
 }
 
 @keyframes parallax4 {
-  0% { transform: translateY(-60px); }
-  100% { transform: translateY(60px); }
+  0% { transform: translateY(-70px); }
+  100% { transform: translateY(70px); }
 }
 
 

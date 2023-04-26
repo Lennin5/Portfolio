@@ -9,6 +9,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./Router";
 
 import es_language from "./translations/es.json";
+import en_language from "./translations/en.json";
 
 i18next.init({
   interpolation: 
@@ -19,7 +20,10 @@ i18next.init({
   resources: {
     es: {
       global: es_language
-    } 
+    },
+    en: {
+      global: en_language
+    }
   }
 });
 

@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import i18next from 'i18next';
+import { useTranslation } from "react-i18next";
+
 import { Parallax } from 'react-parallax';
 
 import VertexBg from '../../../assets/img/experience/vertex-bg.png'
@@ -45,15 +48,18 @@ export default function Experience() {
 
   const isMobile = useMediaSm();
 
+  // i18n language terms
+  const [lg, i18n] = useTranslation("global");
+
   return (
     <>
       <div className="row mb-10">
         <div className="col-12">
 
           <div className="row mb-2 mt-5">
-              <span className="fs-3 text-white fw-bolder">
+              <span className="fs-3 text-white fw-bolder" >
                 <i className="fa-solid fa-briefcase me-2" />
-                Experiencia en <a className="text-gray-500" href="https://vertexstudio.co/">VertexStudio</a>
+                <span dangerouslySetInnerHTML={{__html: lg('experience.vertex-title')}} />
               </span>
               <hr className="mt-2 text-white" />
             </div>
@@ -65,14 +71,7 @@ export default function Experience() {
                     </div>
                     <div className="col-12 col-sm-12 col-md-8 col-lg-10">                    
                       <span className="fs-6 text-white">
-                        Durante mis dos años <b>(Finales de 2021 e inicios de 2023)</b> como desarrollador web en Vertex, trabajé en diversos proyectos que incluyeron el desarrollo de aplicaciones web,
-                        la creación de sitios web personalizados y la optimización del rendimiento de sitios web existentes. 
-                        Trabajé en estrecha colaboración con un equipo de diseñadores y otros desarrolladores para asegurar la entrega de soluciones 
-                        de alta calidad usando las mejores prácticas. <br />
-                        <br />
-                        Aprendí también a desarrollar diferentes áreas como el diseño, el mantenimiendo, la optimización y la administración de los mismos utilizando el entornos ERP (Enterprice Resource Planning) de Odoo.
-                        <br /><br />
-                        A la vez propuse trabajar con el framework de ReactJS y bootstrap para el desarrollo de las aplicaciones web, lo que me permitió aprender a manejarlo más en un proyecto real y aportar a la empresa con nuevas ideas.
+                        <span dangerouslySetInnerHTML={{__html: lg('experience.vertex-description')}} />
                       </span>
                     </div>              
                   </div> 
@@ -81,8 +80,8 @@ export default function Experience() {
 
             <div className="row mb-2 mt-5">
               <span className="fs-3 text-white fw-bolder">
-                <i className="fa-solid fa-code me-2" />
-                Proyectos
+                <i className="fa-solid fa-laptop-code me-2" />
+                {lg('experience.projects-title')}
               </span>
               <hr className="mt-2 text-white" />
             </div>      
@@ -109,7 +108,11 @@ export default function Experience() {
                   </div>                  
                   <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-3">
                     <span className="fs-6 text-medixlab-color mb-2">
-                    <a href="https://medixlab.vxr.space/" target="blank" className="text-medixlab-color"><b><i className="fa-solid fa-user-doctor me-2 fs-4" />Medixlab,</b></a> una página web para una empresa que ofrece servicios de simulación médica para formar estudiantes de medicina
+                      <a href="https://medixlab.vxr.space/" target="blank" className="text-medixlab-color fw-bolder">
+                        <i className="fa-solid fa-user-doctor me-2 fs-4" />
+                        <b>Medixlab</b>
+                      </a>
+                      <span className="text-decoration-none" dangerouslySetInnerHTML={{__html: lg('experience.medixlab-description')}} />
                     </span>
                     <br /><br />
                     <button className="btn btn-primary bg-medixlab-color" type="button" 
@@ -136,7 +139,7 @@ export default function Experience() {
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-cube me-2" />
-                            <b>Funcionalidades:</b> Formularios, videos, integración de Calendly
+                            <b>Funcionalidades:</b> Formularios, Videos, Integración de Calendly, Idiomas
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-link me-2" />
@@ -216,7 +219,7 @@ export default function Experience() {
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-cube me-2" />
-                            <b>Funcionalidades:</b> Formularios, Visualización de modelos 3D, Idiomas
+                            <b>Funcionalidades:</b> Formularios, Visualización de modelos 3D, Animaciones e Idiomas
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-link me-2" />
@@ -356,7 +359,7 @@ export default function Experience() {
                 </div>                  
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-3">
                   <span className="fs-6 text-pink mb-2">
-                  <a href="https://academialinearosa.com/" target="blank" className="text-pink"><b>
+                  <a href="https://academialinearosa.com/web/login" target="blank" className="text-pink"><b>
                     <i className="fa-solid fa-graduation-cap me-2 fs-4" />Academia Línea Rosa,</b></a> una 
                     aplicación web demo de aprendizaje en línea con temática de videojuego estilo gamificación
                   </span>
@@ -385,11 +388,11 @@ export default function Experience() {
                         </li>
                         <li className="pb-2">
                           <i className="fa-solid fa-cube me-2" />
-                          <b>Funcionalidades:</b> Registro de usuarios, formularios, validaciones, videos,  gamificación, envío de correos automáticos
+                          <b>Funcionalidades:</b> Registro de usuarios, Formularios, Validaciones, Videos,  Gamificación, Envío de correos automáticos e Idiomas
                         </li>
                         <li className="pb-2">
                           <i className="fa-solid fa-link me-2" />
-                          <a href="https://academialinearosa.com/" className="text-pink" target="_blank" rel="noreferrer">
+                          <a href="https://academialinearosa.com/web/login" className="text-pink" target="_blank" rel="noreferrer">
                             <b>Ver sitio web</b>
                           </a>
                         </li>

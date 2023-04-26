@@ -1,0 +1,27 @@
+{
+    "key":{
+        "language": "en"
+    },
+    "profile": {
+        "my-title": "Hi! I'm Lennin Lemus",
+        "my-description": "I consider myself a disruptive web developer in creating attractive, intuitive, and effective digital experiences. My motto: \"Think of everything, oh! and one more thing\" :)",
+        "download-cv": "Download CV",
+        "name-title": "Name",
+        "age-title": "Age",
+        "age-value": "23 years old",
+        "address-title": "Address",
+        "country-title": "Country",
+        "phone-title": "Phone"
+    },
+    "education": {
+        "education-title": "Education",
+        "empleatech-description": "Certificate in Soft Skills, English, and Technology",
+        "platzi-description": "Certificate in Fullstack Development with Javascript",
+        "esfe-description": "Technician in Software Development Engineering",
+        "academic-awards-title": "Academic Achievements",
+        "cimat-description": "Participation and 3rd place winner at national level in <a class='text-gray-700' href='https://feriacimatsv.com/cimat2019/'>CIMAT</a> fair <br /> in the <b>Technology</b> area for innovative project <br />",
+        "technologies-title": "Technologies",
+        "other-technologies-title": "Others",
+        "learning-technologies-title": "Learning..."
+    }    
+}

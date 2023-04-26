@@ -1,37 +1,217 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
+
+  // My phone number
+  const phone_number = "50372380568";
+
+  // Loading state
+  const [isLoading, setIsLoading] = useState(false);
+
+    const ToastMessage = (type) => {
+        toast.error("Mensaje enviado correctamente", {
+            position: "top-right",
+            closeButton: false,
+            autoClose: 3000,
+            hideProgressBar: true,
+            closeOnClick: false,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,  
+            className: "shadow-lg",
+            style: {
+                backgroundColor: 
+                type === "success" ? "#6010C6" : "#f44336",
+                borderRadius: 10, 
+                marginTop: 15,
+                marginLeft: 10,
+                marginRight: 10,
+            },
+            bodyStyle: {
+                textAlign: "center",
+            }
+        });;  
+    }   
+
+    // On load page
+    useEffect(() => {
+      limitCharacters('mce-FCOMMENT', 248);
+
+      // Limit characters on input
+      function limitCharacters(field_name, limit){
+          var field = document.getElementById(field_name);
+          if (field){
+              field.addEventListener('keypress', function (e) {
+                  if (field.value.length >= limit) {
+                      e.preventDefault();
+                  }
+              })
+          }
+      }
+
+  }, [])  
+
+  // Function to verify if all fields are filled to enable the submit button
+  function verifyFields() {
+      // Define an array with the IDs of the fields to verify
+    const arrayFields = ['mce-EMAIL'];
+    // Create a new array with boolean values indicating whether each field is filled or not
+    const formFilled = arrayFields.map(field => document.getElementById(field).value !== '');
+    // Check if all fields are filled
+    const allFieldsFilled = formFilled.every(Boolean);
+
+    // Add or remove the 'disabled' className from the form button based on the value of all_fields_filled
+    const formButton = document.getElementById('form-button');
+    formButton.classList.toggle('disabled', !allFieldsFilled);
+  }     
+  function clearInputs() {
+    document.getElementById('mce-EMAIL').value = '';
+    document.getElementById('mce-FCOMMENT').value = '';
+  }
+
+  // Function to send data to Mailchimp
+  async function sendDataToMailchimp() {
+    var username = "lenninlemus0@gmail.com";
+    var url = "https://gmail.us21.list-manage.com/subscribe/post?u=b4929ada4a58f57166f6f7af5&amp;id=795fbc8c80&amp;f_id=009bb2e1f0"
+    try {                
+        const contactForm = document.querySelector('form');
+        if (!contactForm || !(contactForm instanceof HTMLFormElement)) {
+            throw new Error('Invalid form element.');
+        }            
+        const allData = new FormData(contactForm);            
+        // Send data with fetch
+        const response = await fetch(url, {
+            method: 'POST',
+            body: allData,
+            mode: 'no-cors',
+        });
+        clearInputs();
+        ToastMessage("success");
+        // console.log(`Data uploaded to ${username} Mailchimp account: `, response);     
+        setIsLoading(false);
+    } catch (error) {
+        ToastMessage("error");
+        setIsLoading(false);
+        alert("Error to send data, please try again later.");
+        // console.error(`Error to upload data to ${username} Mailchimp account: `, error);
+    }    
+  }         
+
+  // Function to handle click on submit button
+  async function handleClick(event) {
+    await event.preventDefault();
+    setIsLoading(true);
+    sendDataToMailchimp();
+  }    
+
   return (
     <>
-      <div className="row mb-10">
+    <ToastContainer transition={Bounce} />
+      <div className="row d-flex justify-content-center mb-10">
         <div className="col-12">
-
           <div className="row mb-2">
             <span className="fs-3 text-white fw-bolder">
               <i className="fa-solid fa-phone me-2" />
               Contáctame
             </span>
             <hr className="mt-2 text-white" />
-          </div>
-                 
+          </div>   
+        </div>
+      </div>  
+
+      <div className="row d-flex justify-content-center mb-10">
+        <div className="col-12">                      
           <div className="row d-flex justify-content-center">
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
-                {/* <img className="technology-logo" src={HtmlLogo} alt="Html Logo" /> */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                  <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-                </svg>             
-                +503 7238 0568   
+            <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-0 mt-lg-0">
+              <div className="row text-center">
+                <a href={`https://wa.me/${phone_number}`} target="blank" className="text-white text-decoration-none">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-whatsapp" viewBox="0 0 16 16">
+                      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg> 
+                  </div>
+                  <div className="mt-3">
+                    <h4>
+                      <b>+503 7238 0568</b>
+                    </h4>
+                  </div>
+                </a>
+              </div>                             
             </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
-  <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
-  <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"/>
-</svg>                
+            <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+              <div className="row text-center text-white">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                  </svg>
+                </div>
+                <div className="mt-3">
+                  <h4>
+                    <b>lenninlemus0@gmail.com</b>
+                  </h4>
+                </div>
+              </div>                             
             </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
-                
-            </div>                             
-          </div>          
+            <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-4 mt-lg-0">              
+              <div className="row text-center text-white">
+                <a href="https://github.com/Lennin5" target="blank" className="text-white text-decoration-none">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
+                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                  </div>
+                  <div className="mt-3">
+                    <h4>
+                      <b>Lennin5</b>
+                    </h4>
+                  </div>
+                </a>    
+              </div>                                       
+            </div>                         
+          </div>         
+
+          <div className="row d-flex justify-content-center mb-10 mt-5">
+            <div className="col-12 col-md-6 col-lg-6">
+              <div className="text-center text-white mb-7 mt-5">
+                <span className="fs-4">ó</span>
+                <br />
+                <span className="fs-3">¡Envíame un mensaje!</span>
+              </div>              
+              
+              <form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="text-white">
+                <div className="mb-3">
+                  <label htmlFor="exampleInputEmail1" className="form-label fs-5">Correo Electrónico*</label>
+                  <input type="email" className="form-control" name="EMAIL" id="mce-EMAIL" aria-describedby="emailHelp" required={true} style={{borderRadius: 10, outline: "none", border: "none"}} onChange={verifyFields} />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="exampleFormControlTextarea1" className="form-label fs-5">Mensaje (opcional)</label>
+                  <textarea className="form-control" name="FCOMMENT" id="mce-FCOMMENT" rows="3" style={{borderRadius: 10, outline: "none", border: "none"}} onChange={verifyFields} />
+                </div>
+
+                <div id="mce-responses" className="clear foot">
+                        <div className="response" id="mce-error-response" style={{display: "none"}}></div>
+                        <div className="response" id="mce-success-response" style={{display: "none"}}></div>
+                    </div>
+                    <div style={{position: "absolute", left: "-5000px"}} aria-hidden="true">
+                        <input type="text" name="b_f5ca7a0cb15183f1d788df717_fd44f214b7" tabIndex="-1" />
+                    </div>
+
+                <button type="button" id="form-button" onClick={handleClick}
+                className={`btn btn-primary rounded-1 text-white disabled ${isLoading ? "disabled" : ""}`} 
+                style={{backgroundColor: "#3C48C8"}}>
+                  {isLoading && (
+                  <div className="spinner-border spinner-border-sm text-light" role="status">
+                      <span className="visually-hidden">Loading...</span>
+                  </div>
+                  )}
+                  {!isLoading && <span>Enviar</span>}                     
+                </button>
+              </form>
+            </div>
+          </div> 
 
         </div>
       </div>

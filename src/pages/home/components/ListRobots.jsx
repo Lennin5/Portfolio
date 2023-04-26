@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
-import RobotBackgroundDefault from '../../../assets/img/RobotBackgroundDefaultPurple.png'
-import RobotBackgroundSelected from '../../../assets/img/RobotBackgroundSelectedCyan.png'
+import RobotBackgroundDefault from '../../../assets/img/experience/robot-bg-purple.png'
+import RobotBackgroundSelected from '../../../assets/img/experience/robot-bg-cyan.png'
 
 import House from '../../../assets/img/robots/House.glb';
 import Spin from '../../../assets/img/robots/Spin.glb';
@@ -14,14 +14,14 @@ const robots = [House, Swing, Spin, Card, Lion];
 const ListRobots = (props) => {
     const { isMovileDevice } = props;
 
-    // useEffect(() => {
-    //     setInterval(() => {
-    //         var random_number = Math.floor(Math.random() * 5);
-    //         if(document.getElementById("model-" + random_number)){
-    //             document.getElementById("model-" + random_number).click();
-    //         }            
-    //     }, 2000);
-    // }, []);
+    useEffect(() => {
+        setInterval(() => {
+            var random_number = Math.floor(Math.random() * 5);
+            if(document.getElementById("model-" + random_number)){
+                document.getElementById("model-" + random_number).click();
+            }            
+        }, 2000);
+    }, []);
 
     // call selectRobotInViewer 
     const selectRobotInViewer = (robot_model_id) => {

@@ -24,7 +24,7 @@ export default function HomeRoute() {
   return (
     <>
       {/* <br /><br /><br /><br /><br /> */}
-      <div className="mt-5">
+      <div className="mt-0">
         <Carousel />  
       </div>      
     </>

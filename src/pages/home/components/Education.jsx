@@ -1,4 +1,7 @@
 import React from 'react'
+import i18next from 'i18next';
+import { useTranslation } from "react-i18next";
+import { motion } from 'framer-motion'
 
 import EmpleatechLogo from '../../../assets/img/education/empleatech-logo.png'
 import EsfeLogo from '../../../assets/img/education/esfe-logo.png'
@@ -22,144 +25,162 @@ import RustLogo from '../../../assets/img/education/technologies/rust.png'
 import YewLogo from '../../../assets/img/education/technologies/yew.png'
 import HasuraLogo from '../../../assets/img/education/technologies/hasura.png'
 
+import { 
+  item_showHidden,
+  container_delay_childrens_1,
+  container_delay_childrens_2,
+} from '../../../hooks/FramerMotionAnimations'
+
 export default function Education() {
+
+  // i18n language terms
+  const [lg, i18n] = useTranslation("global");
+
   return (
     <>
-      <div className="row mb-10">
-        <div className="col-12">
+      <motion.div className="row mb-10 mt-5" initial="initial" whileInView="animate" viewport={{ once: false }}>
+        <motion.div className="col-12" variants={container_delay_childrens_1}>
 
-          <div className="row mb-2">
+          <motion.div className="row mb-2" variants={item_showHidden}>
             <span className="fs-3 text-white fw-bolder">
               <i className="fa-solid fa-user-graduate me-2" />
-              Educación
+              {lg('education.education-title')}
             </span>
             <hr className="mt-2 text-white" />
-          </div>
+          </motion.div>
           <div className="row d-flex justify-content-around">
-            <div className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
+            <motion.div className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center text-center">
                 <img className="education-logo" src={EmpleatechLogo} alt="" />
-                <span className="fs-6 text-gray-700">
-                Diplomado en Habilidades Blandas, Ingles y Tecnología <br />
+                <motion.span className="fs-6 text-gray-700" variants={item_showHidden}>
+                {lg('education.empleatech-description')} <br />
                 -2019
-                </span>
+                </motion.span>
               </div>                  
-            </div>              
-            <div className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
+            </motion.div>              
+            <motion.div variants={item_showHidden} className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center text-center">
                 <img className="education-logo" src={PlatziLogo} alt="" />
                 <span className="fs-6 text-gray-700">
-                Diplomado en Desarrollo Fullstack con Javascript <br />
+                {lg('education.platzi-description')} <br />
                 -2020
                 </span>
               </div>                  
-            </div>              
-            <div className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
+            </motion.div>              
+            <motion.div variants={item_showHidden} className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center text-center">
                 <img className="education-logo mb-2" src={EsfeLogo} alt="" />
                 <span className="fs-6 text-gray-700">
-                Técnico en Ingeniería de Desarrollo de Software <br />
+                {lg('education.esfe-description')} <br />
                 -2020, 2021
                 </span>
               </div>                  
-            </div>
+            </motion.div>
           </div>
 
-          <div className="row mb-2 mt-5">
+          <motion.div className="row mb-2 mt-5" variants={item_showHidden}>
             <span className="fs-3 text-white fw-bolder">
               <i className="fa-solid fa-award me-2" />
-              Logros Académicos
+              {lg('education.academic-awards-title')}
             </span>
             <hr className="mt-2 text-white" />
-          </div>
+          </motion.div>
           <div className="row d-flex justify-content-center align-items-center">
             <div className="col-12 col-sm-12 col-md-11 col-lg-11 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center align-items-center text-center text-lg-start">
                 <div className="col-12 col-sm-12 col-md-4 col-lg-2">
                 <img className="education-logo" src={CimatLogo} alt="" />
                 </div>
-                <div className="col-12 col-sm-12 col-md-8 col-lg-10">
+                <motion.div className="col-12 col-sm-12 col-md-8 col-lg-10" variants={item_showHidden}>
                   <span className="fs-6 text-gray-700">
-                    Participación y ganador de 3° lugar a nivel nacional en feria CIMAT <br />
-                    en área de <b>Tecnología</b> por proyecto innovador. <br />
+                    <span dangerouslySetInnerHTML={{__html: lg('education.cimat-description')}} />
                     -2019
                   </span>
-                </div>              
+                </motion.div>              
               </div>                  
             </div>              
           </div>       
 
-          <div className="row mb-10 mt-5">
+          {/* </motion.div>
+      </motion.div>          
+
+      <motion.div className="row mb-10 mt-5 l-r" initial="initial" whileInView="animate" viewport={{ once: true }}>
+        <motion.div className="col-12" variants={container_delay_childrens_1}>       */}
+
+          <motion.div className="row mb-10 mt-5" variants={item_showHidden}>
             <span className="fs-3 text-white fw-bolder">
-              <i className="fa-solid fa-laptop-code me-2" />
-              Tecnologías
+              <i className="fa-solid fa-code me-2" />
+              {lg('education.technologies-title')}
             </span>
             <hr className="mt-2 text-white" />
-          </div>                  
+          </motion.div>                  
           <div className="row d-flex justify-content-center">
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
                 <img className="technology-logo" src={HtmlLogo} alt="Html Logo" />
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
                 <img className="technology-logo" src={PythonLogo} alt="Css Logo" />
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
                 <img className="technology-logo" src={ReactLogo} alt="React Logo" />
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
                 <img className="technology-logo" src={BootstrapLogo} alt="Sql Logo" />
-            </div>     
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            </motion.div>     
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
                 <img className="technology-logo" src={FirebaseLogo} alt="Js Logo" />
-            </div>                               
+            </motion.div>                               
           </div>
 
-          <div className="row mb-10 mt-5">
+          <motion.div className="row mb-10 mt-5" variants={item_showHidden}>
             <span className="fs-3 text-white fw-bolder">
               <i className="fa-solid fa-folder-open me-2" />
-              Otras
+              {lg('education.other-technologies-title')}
             </span>
             <hr className="mt-2 text-white" />
-          </div>        
+          </motion.div>        
           <div className="row d-flex justify-content-center">            
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
               <img className="technology-logo" src={GithubLogo} alt="Html Logo" />
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
                 <img className="technology-logo" src={GitLogo} alt="Html Logo" />
-            </div>             
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            </motion.div>             
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
               <img className="technology-logo" src={SqlLogo} alt="Html Logo" />
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
               <img className="technology-logo" src={PhotoshopLogo} alt="Html Logo" />
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-2">
+            </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
               <img className="technology-logo" src={FigmaLogo} alt="Html Logo" />
-            </div>            
+            </motion.div>            
           </div>
 
-          <div className="row mb-10 mt-5">
-            <span className="fs-5 text-white fw-bolder">
-              <i className="fa-solid fa-spinner me-2" />
-              Aprendiendo...
+          <motion.div className="row mb-10 mt-5" variants={item_showHidden}>
+            <span className="fs-4 text-white fw-bolder">
+              {/* <i className="fa-solid fa-spinner me-2" /> */}
+              <div class="spinner-border text-light me-2 " role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>              
+              {lg('education.learning-technologies-title')}
             </span>
             <hr className="mt-2 text-white" />
-          </div>           
+          </motion.div>           
           <div className="row d-flex justify-content-center">
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">  
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-3" variants={item_showHidden}>
               <img className="technology-logo" src={RustLogo} alt="Html Logo" />
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-3" variants={item_showHidden}>
               <img className="technology-logo" src={YewLogo} alt="Html Logo" />
-            </div>
-            <div className="col-6 col-sm-6 col-md-4 col-lg-3">
+            </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-3" variants={item_showHidden}>
               <img className="technology-logo" src={HasuraLogo} alt="Html Logo" />
-            </div>
+            </motion.div>
           </div>
 
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </>
   )
 }

@@ -118,7 +118,7 @@ window.onload = function() {
           animateElement(element, originalText, options);
   
           element.addEventListener("mouseover", (event) => {
-              animateElement(event.target, originalText, options);
+            //   animateElement(event.target, originalText, options);
           });
       }
   }  

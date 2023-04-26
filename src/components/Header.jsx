@@ -91,7 +91,7 @@ const Header = (props) => {
                   }          */}
                   <i className="fa-solid fa-globe" style={{marginLeft:10, textShadow: `0 0 13px #000`}}></i>         
                 </a>
-                <ul className="dropdown-menu dropdown-menu-light">
+                <ul className="dropdown-menu dropdown-menu-light rounded-1">
                   <li>
                     <a className="dropdown-item" href="#es" onClick={() =>changeLanguage('es')}>
                      <img src={SpainFlag} style={{width: 20}} alt="Español" /> Español</a>

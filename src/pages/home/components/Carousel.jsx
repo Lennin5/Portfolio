@@ -1,23 +1,41 @@
 import React, { useState, useEffect } from 'react';
+import i18next from 'i18next';
+import { useTranslation } from "react-i18next";
+import { motion } from 'framer-motion';
 import TypeIt from "typeit-react";
 import ProgressBar from '../../../components/Bar';
 import '../../../hooks/init.js'
 
-import Profile from '../../../assets/img/be-happy.png';
-import Education from '../../../assets/img/education.png';
-import Experience from '../../../assets/img/experience.png';
-import Contact from '../../../assets/img/contact.png';
+import Profile from '../../../assets/img/profile/be-happy.png';
+import Education from '../../../assets/img/profile/education.png';
+import Experience from '../../../assets/img/profile/experience.png';
+import Contact from '../../../assets/img/profile/contact.png';
 
 import ProfileSection from './Profile.jsx'
 import EducationSection from './Education.jsx'
 import ExperienceSection from './Experience.jsx'
 import ContactSection from './Contact.jsx'
 
+import {
+  showHidden,
+  topToInitial_1s,
+  topToInitial_1_5s,
+  topToInitial_2s,
+  topToInitial_2_5s,
+  showPrevButton,
+  showNextButton,
+} from '../../../hooks/FramerMotionAnimations'
+
 
 export default function Carousel(){
 
     const [currentIndexImage, setcurrentIndexImage] = useState(0);    
     const [currentIndexImageColor, setcurrentIndexImageColor] = useState(0);
+
+    // i18n language terms
+    const [lg, i18n] = useTranslation("global");
+    // i18n current language
+    const [language, setlanguage] = useState(i18next.language);    
 
     // click on next button on interval of 5 seconds
     // useEffect(() => {
@@ -57,7 +75,8 @@ export default function Carousel(){
 
   return (
     <>
-      <div className="d-lg-none d-xl-block d-xl-none">
+      <div className="">
+      {/* <div className="d-lg-none d-xl-block d-xl-none"> */}
         <ProgressBar />
         <TypeIt className="text-white text-center fs-4"                                              
                 options={{
@@ -67,33 +86,33 @@ export default function Carousel(){
                     breakLines: false,
                     cursorChar: "|",
                     html: true,
-                    loopDelay: 5000
+                    loopDelay: 8000,
                 }}
             />
       </div>
       <div className="container mt-25 mt-md-0">
         <div className="row d-flex justify-content-center align-items-end">
-          <div className="col-md-6 order-md-1 col-lg-2 order-lg-1 z-1  
+          <motion.div className="col-md-6 order-md-1 col-lg-2 order-lg-1 z-1  
           d-sm-none d-md-block 
           d-none d-sm-block
-          d-md-none d-lg-block">
-            <div className="d-flex justify-content-center">
+          d-md-none d-lg-block" initial="initial" whileInView="animate" viewport={{ once: true }}>
+            <motion.div className="d-flex justify-content-center" variants={showPrevButton}>
               <button type="button" 
               className={`prev border-0 btn-circle d-flex justify-content-center align-items-center shadow-lg buttons-${currentIndexImageColor}`} 
               onClick={handlePrev} id="prev-carousel-item">
                   <i className="fa-solid fa-angle-left" />
               </button>
-            </div>
-          </div>
-          <div className="col-md-12 order-md-3 col-lg-8 order-lg-2">
+            </motion.div>
+          </motion.div>
+          <motion.div className="col-md-12 order-md-3 col-lg-8 order-lg-2" initial="initial" whileInView="animate" viewport={{ once: true }}>
             <div className="container-x mt-10">
             <div className="carousel">
               <div className="a access-card">
-                <div className='layer1'>
-                <div className="item-x sectionn ec shadow-lg " style={{background: `url(${Profile})`, backgroundPosition: "initial"}}>
+                <motion.div className='layer1' variants={topToInitial_1s}>
+                <div className="item-x sectionn ec shadow-lg" style={{background: `url(${Profile})`, backgroundPosition: "initial"}}>
                     {/* <p className="bottom-left">Soy Lennin Lemus</p> */}
                     <div style={{paddingTop: 130}}>
-                    <TypeIt className="legend-platform-text"                                              
+                    {/* <TypeIt className="legend-platform-text"                                              
                             options={{
                                 strings: ["Hola! Me presento..!", "Soy <b>Lennin Josué Lemus</b>"],
                                 speed: 100,
@@ -103,17 +122,16 @@ export default function Carousel(){
                                 html: true,
                                 loopDelay: 5000
                             }}
-                        />    
+                        />     */}
                     </div>
                   </div> 
-                  </div>
+                  </motion.div>
               </div>
               <div className="b access-card">
-                <div className="layer2">
+                <motion.div className="layer2" variants={topToInitial_1_5s}>
                   <div className="item-x sectionn ec shadow-lg" id="education-img" style={{background: `url(${Education})`, backgroundPosition: "initial", filter: `grayscale(100%)`}}>
-                    {/* <p className="bottom-left">Soy Lennin Lemus</p> */}
-                    <div style={{paddingTop: 0}}>
-                    <TypeIt className="formation-text"                                              
+                    <div style={{paddingTop: 0, display: lg("key.language") === 'es' ? "block" : "none"}}>
+                        <TypeIt className="formation-text"                                              
                             options={{
                                 strings: ["<b>FORMACIÓN</b>", "<b>HABILIDADES</b>"],
                                 speed: 200,
@@ -123,13 +141,26 @@ export default function Carousel(){
                                 html: true,
                                 loopDelay: 5000
                             }}
-                        />    
+                        />
                     </div>
+                    <div style={{paddingTop: 0, display: lg("key.language") === 'en' ? "block" : "none"}}>
+                        <TypeIt className="formation-text"                                              
+                            options={{
+                                strings: ["<b>EDUCATION</b>", "<b>SKILLS</b>"],
+                                speed: 200,
+                                loop: true, 
+                                breakLines: false,
+                                cursorChar: "|",
+                                html: true,
+                                loopDelay: 5000
+                            }}
+                        />
+                    </div>                    
                   </div>  
-                </div>  
+                </motion.div>  
               </div>
               <div className="c access-card">
-                <div className="layer3">
+                <motion.div className="layer3" variants={topToInitial_2s}>
                   <div className="item-x sectionn ec shadow-lg" style={{background: `url(${Experience})`, backgroundPosition: "initial"}}>
                     {/* <p className="bottom-left">Soy Lennin Lemus</p> */}
                     <div style={{paddingTop: 0}}>
@@ -146,10 +177,10 @@ export default function Carousel(){
                         />    
                     </div>
                   </div>  
-                </div>  
+                </motion.div>  
               </div>          
               <div className="d access-card">
-                <div className="layer4">
+                <motion.div className="layer4" variants={topToInitial_2s}>
                   <div className="item-x sectionn ec shadow-lg" id="contact-img" style={{background: `url(${Contact})`, backgroundPosition: "initial", filter: `grayscale(100%)`}}>
                     {/* <p className="bottom-left">Soy Lennin Lemus</p> */}
                     <div style={{paddingTop: 0}}>
@@ -166,23 +197,23 @@ export default function Carousel(){
                         />    
                     </div>
                   </div>  
-                </div>  
+                </motion.div>  
               </div>
             </div>
           </div>
-          </div>
-          <div className="col-md-6 order-md-2 col-lg-2 order-lg-3 z-1      
+          </motion.div>
+          <motion.div className="col-md-6 order-md-2 col-lg-2 order-lg-3 z-1      
           d-sm-none d-md-block 
           d-none d-sm-block
-          d-md-none d-lg-block">
-            <div className="d-flex justify-content-center">
+          d-md-none d-lg-block" initial="initial" whileInView="animate" viewport={{ once: true }}>
+            <motion.div className="d-flex justify-content-center" variants={showNextButton}>
               <button type="button" 
               className={`next border-0 btn-circle d-flex justify-content-center align-items-center shadow-lg buttons-${currentIndexImageColor}`}
               onClick={handleNext} id="next-carousel-item">
                     <i className="fa-solid fa-angle-right" />
               </button>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
         <br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br />
