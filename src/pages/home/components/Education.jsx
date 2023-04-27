@@ -1,5 +1,4 @@
 import React from 'react'
-import i18next from 'i18next';
 import { useTranslation } from "react-i18next";
 import { motion } from 'framer-motion'
 
@@ -28,7 +27,6 @@ import HasuraLogo from '../../../assets/img/education/technologies/hasura.png'
 import { 
   item_showHidden,
   container_delay_childrens_1,
-  container_delay_childrens_2,
 } from '../../../hooks/FramerMotionAnimations'
 
 export default function Education() {

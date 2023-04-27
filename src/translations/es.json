@@ -31,7 +31,7 @@
         "functionalities-title": "Funcionalidades:",
         "link-title": "Ver sitio web",
 
-        "vertex-title": "Experiencia en <a class='text-gray-500' href='https://vertexstudio.co/'>VertexStudio</a>",
+        "vertex-title": "Experiencia en <a class='text-gray-500' href='https://vertexstudio.co/' target='blank'>VertexStudio</a>",
         "vertex-description": "Durante mis dos años <b>(Finales de 2021 e inicios de 2023)</b> como desarrollador en Vertex, trabajé en diversos proyectos que incluyeron la programación de aplicaciones web en lenguaje Python utilizando el framework Odoo 14, la creación de sitios web personalizados y la optimización del rendimiento de sitios web existentes. Trabajé en estrecha colaboración con un equipo de diseñadores y otros desarrolladores para asegurar la entrega de soluciones de alta calidad usando las mejores prácticas. <br /><br /> Aprendí también a desarrollar diferentes áreas como el diseño, el mantenimiendo, la optimización y la administración de los mismos utilizando el entorno ERP (Enterprice Resource Planning) de Odoo. <br /><br /> A la vez propuse trabajar con el framework de ReactJS y bootstrap para el desarrollo de algunas aplicaciones web, lo que me permitió aprender a manejarlo más en proyectos reales y aportar a la empresa con nuevas ideas.",
         "projects-title": "Proyectos",
 
@@ -60,7 +60,7 @@
         "contact-me-title": "Contáctame",
         "o-letter": "ó",
         "main-title": "¡Envíame un mensaje!",
-        "email-text": "Ccorreo electrónico",
+        "email-text": "Correo Electrónico*",
         "message-text": "Mensaje (opcional)",
         "button-text": "Enviar"
     }

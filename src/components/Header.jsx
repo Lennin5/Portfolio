@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import TypeIt from "typeit-react";
 import i18next from 'i18next';
-import { useTranslation } from "react-i18next";
 
 // import ProgressBar from './ProgressBar';
 import ProgressBar from './Bar'
-import LogoDark from '../assets/img/lennin-logo-black.png';
-import LogoLight from '../assets/img/lennin-logo-white.png';
 import EnglandFlag from '../assets/img/flags/England.png';
 import SpainFlag from '../assets/img/flags/Spain.png';
 
-const Header = (props) => {
-  const { IsMainView } = props;
+export default function Header(){
+  // const { IsMainView } = props;
 
   // Dinamic navbar color change on scroll
   window.onscroll = function () { changeNavbarColor() };
@@ -30,8 +27,6 @@ const Header = (props) => {
     }
   }
 
-  // i18n language terms
-  const [lg, i18n] = useTranslation("global");
   // i18n current language
   const [language, setlanguage] = useState(i18next.language);
   
@@ -144,17 +139,17 @@ const Header = (props) => {
                         loopDelay: 8000,
                     }}
                 />            
-                <a href="#homepage" className="d-none" onClick={closeModal}>
+                {/* <a href="#homepage" onClick={closeModal}>
                   <img src={LogoDark} alt="Logo" width="150" height="150" className="d-inline-block align-text-top img-fluid" />
-                </a>            
+                </a>             */}
           </div>                    
         </div>
         <div className="offcanvas offcanvas-start text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-          <div className="offcanvas-header text-end d-flex justify-content-end" style={{backgroundColor: '#373737'}}>
+          <div className="offcanvas-header text-end d-flex justify-content-end subnavbar-mobile-mode" id="subnavbar-mobile-mode-header" style={{backgroundColor: '#373737'}}>
             {/* <img src={LogoDark} alt="Logo" width="150" height="150" className="d-inline-block align-text-top img-fluid " /> */}
             <button type="button" className="btn-close btn-close-white fs-5" data-bs-dismiss="offcanvas" aria-label="Close" id="closeModal" onClick={() => setIsMenuOpen(false)}></button>
           </div>
-          <div className="offcanvas-body" style={{backgroundColor: '#373737', zIndex: 100}}>
+          <div className="offcanvas-body subnavbar-mobile-mode" style={{backgroundColor: '#373737', zIndex: 100}} id="subnavbar-mobile-mode-body">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0" style={{marginLeft:20}}>             
               <li className="nav-item dropdown dropend">
                 <a className="nav-link dropdown-toggle text-white d-flex align-items-center" 
@@ -181,6 +176,4 @@ const Header = (props) => {
 </>
 )
 }
-
-export default Header
 

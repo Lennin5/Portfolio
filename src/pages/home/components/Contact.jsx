@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from 'framer-motion'
+import { useTranslation } from "react-i18next";
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { 
   item_showHidden,
   container_delay_childrens_1,
-  container_delay_childrens_2,
 } from '../../../hooks/FramerMotionAnimations'
 
 export default function Contact() {
@@ -16,6 +16,9 @@ export default function Contact() {
 
   // Loading state
   const [isLoading, setIsLoading] = useState(false);
+
+  // i18n language terms
+  const [lg, i18n] = useTranslation("global");  
 
     const ToastMessage = (type) => {
         toast.error("Mensaje enviado correctamente", {
@@ -134,7 +137,7 @@ export default function Contact() {
           <motion.div className="row mb-10" variants={item_showHidden}>
             <span className="fs-3 text-white fw-bolder">
               <i className="fa-solid fa-phone me-2" />
-              Contáctame
+              {lg('contact-me.contact-me-title')}
             </span>
             <hr className="mt-2 text-white" />
           </motion.div>             
@@ -185,18 +188,22 @@ export default function Contact() {
               </div>                                       
             </motion.div>        
             <motion.div className="col-12 col-md-12 col-lg-6" variants={item_showHidden}>
-              <div className="text-center text-white mb-7 mt-5">
-                  <span className="fs-4">ó</span>
+              <div className="text-center text-white mb-9 mt-10">
+                  <span className="fs-4">
+                    {lg('contact-me.o-letter')}
+                  </span>
                   <br />
-                  <span className="fs-3">¡Envíame un mensaje!</span>
+                  <span className="fs-3">
+                    {lg('contact-me.main-title')}
+                  </span>
               </div> 
               <form id="mc-embedded-subscrimotion.be-form" name="mc-embedded-subscribe-form" className="text-white">
-                <div className="mb-3">
-                  <label htmlFor="exampleInputEmail1" className="form-label fs-5">Correo Electrónico*</label>
+                <div className="mb-5">
+                  <label htmlFor="exampleInputEmail1" className="form-label fs-5">{lg('contact-me.email-text')}</label>
                   <input type="email" className="form-control" name="EMAIL" id="mce-EMAIL" aria-describedby="emailHelp" required={true} style={{borderRadius: 10, outline: "none", border: "none"}} onChange={verifyFields} />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="exampleFormControlTextarea1" className="form-label fs-5">Mensaje (opcional)</label>
+                <div className="mb-5">
+                  <label htmlFor="exampleFormControlTextarea1" className="form-label fs-5">{lg('contact-me.message-text')}</label>
                   <textarea className="form-control" name="FCOMMENT" id="mce-FCOMMENT" rows="3" style={{borderRadius: 10, outline: "none", border: "none"}} onChange={verifyFields} />
                 </div>
 
@@ -216,7 +223,7 @@ export default function Contact() {
                       <span className="visually-hidden">Loading...</span>
                   </div>
                   )}
-                  {!isLoading && <span>Enviar</span>}                     
+                  {!isLoading && <span>{lg('contact-me.button-text')}</span>}
                 </button>
               </form>              
             </motion.div>

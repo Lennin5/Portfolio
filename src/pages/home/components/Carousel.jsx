@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import i18next from 'i18next';
 import { useTranslation } from "react-i18next";
 import { motion } from 'framer-motion';
 import TypeIt from "typeit-react";
-import ProgressBar from '../../../components/Bar';
 import '../../../hooks/init.js'
 
 import Profile from '../../../assets/img/profile/be-happy.png';
@@ -17,11 +15,9 @@ import ExperienceSection from './Experience.jsx'
 import ContactSection from './Contact.jsx'
 
 import {
-  showHidden,
   topToInitial_1s,
   topToInitial_1_5s,
   topToInitial_2s,
-  topToInitial_2_5s,
   showPrevButton,
   showNextButton,
 } from '../../../hooks/FramerMotionAnimations'
@@ -37,8 +33,6 @@ export default function Carousel(){
 
     // i18n language terms
     const [lg, i18n] = useTranslation("global");
-    // i18n current language
-    const [language, setlanguage] = useState(i18next.language);    
 
     // click on next button on interval of 5 seconds
     // useEffect(() => {
@@ -80,26 +74,38 @@ export default function Carousel(){
 
     function changeScrollBarColor(index){
         // get two navbars, desktop and mobile
-        var elements = document.getElementsByClassName("progress-bar");       
+        var elements = document.getElementsByClassName("progress-bar");     
         if(index === 0){
           for(var i = 0; i < elements.length; i++){
             elements[i].style.setProperty('background', '#ffffff', 'important');
-            document.getElementById("navbar-mobile-mode").style.background = '#000000f5';
+            document.getElementById("navbar-mobile-mode").style.background = '#000000f5';     
+
+            document.getElementById("subnavbar-mobile-mode-header").style.background = '#373737fd';
+            document.getElementById("subnavbar-mobile-mode-body").style.background = '#373737fd';
           }          
         }else if(index === 1){
           for(var i = 0; i < elements.length; i++){
             elements[i].style.setProperty('background', isMobile ? '#b7fff5' : '#b7fff5', 'important');
             document.getElementById("navbar-mobile-mode").style.background = '#1abd9ffd'; // Agregue al final fd para solucionar un bug extraño tipo glitch que aparece al hacer scroll
+
+            document.getElementById("subnavbar-mobile-mode-header").style.background = '#1abd9ffd';
+            document.getElementById("subnavbar-mobile-mode-body").style.background = '#1abd9ffd';
           }
         }else if(index === 2){
           for(var i = 0; i < elements.length; i++){
             elements[i].style.setProperty('background', isMobile ? '#e7b7ff' : '#e7b7ff', 'important');
-            document.getElementById("navbar-mobile-mode").style.background = '#8F0091fd';
+            document.getElementById("navbar-mobile-mode").style.background = '#8F0091fd';    
+            
+            document.getElementById("subnavbar-mobile-mode-header").style.background = '#8F0091fd';
+            document.getElementById("subnavbar-mobile-mode-body").style.background = '#8F0091fd';
           }
         }else if(index === 3){
           for(var i = 0; i < elements.length; i++){
             elements[i].style.setProperty('background', isMobile ? '#c9b7ff' : '#84f2ff', 'important');
             document.getElementById("navbar-mobile-mode").style.background = '#6010C6fd';
+
+            document.getElementById("subnavbar-mobile-mode-header").style.background = '#6010C6fd';
+            document.getElementById("subnavbar-mobile-mode-body").style.background = '#6010C6fd';
             
           }
         }
@@ -257,7 +263,7 @@ export default function Carousel(){
                     <div style={{paddingTop: 0, display: lg("key.language") === 'en' ? "block" : "none"}}>
                     <TypeIt className="contact-text"                                              
                             options={{
-                                strings: ["<b>¡CONTACT ME!</b>", "<b>LET'S TALK!</b>"],
+                                strings: ["<b>CONTACT ME!</b>", "<b>LET'S TALK!</b>"],
                                 speed: 200,
                                 loop: true, 
                                 breakLines: false,

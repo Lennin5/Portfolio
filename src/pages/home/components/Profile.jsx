@@ -1,9 +1,8 @@
 import React from 'react'
 import { saveAs } from 'file-saver';
-import LenninLemusCV from '../../../assets/pdf/LenninLemusCV.pdf';
-
-import i18next from 'i18next';
 import { useTranslation } from "react-i18next";
+
+import LenninLemusCV from '../../../assets/pdf/LenninLemusCV.pdf';
 
 export default function Profile() {
 
@@ -11,7 +10,7 @@ export default function Profile() {
     const [lg, i18n] = useTranslation("global");
 
   const downloadPDF = () => {
-    saveAs(LenninLemusCV, 'LenninLemus.pdf');
+    saveAs(LenninLemusCV, 'LenninLemusCV.pdf');
   };
 
   return (

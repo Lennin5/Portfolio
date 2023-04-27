@@ -31,7 +31,7 @@
         "functionalities-title": "Functionalities:",
         "link-title": "View website",
     
-        "vertex-title": "Experience at <a class='text-gray-500' href='https://vertexstudio.co/'>VertexStudio</a>",
+        "vertex-title": "Experience at <a class='text-gray-500' href='https://vertexstudio.co/' target='blank'>VertexStudio</a>",
         "vertex-description": "During my two years <b>(Late 2021 to early 2023)</b> as a developer at Vertex, I worked on various projects that included programming web applications in Python using the Odoo 14 framework, creating customized websites, and optimizing the performance of existing websites. I worked closely with a team of designers and other developers to ensure the delivery of high-quality solutions using best practices. <br /><br /> I also learned to develop different areas such as design, maintenance, optimization, and administration of them using the Odoo ERP (Enterprise Resource Planning) environment. <br /><br /> At the same time, I proposed working with the ReactJS and Bootstrap framework for the development of some web applications, which allowed me to learn how to handle it more in real projects and contribute to the company with new ideas.",
         "projects-title": "Projects",
     
@@ -55,5 +55,13 @@
         "linea-rosa-academy-languages": "Xml, Qweb (programmatic Html), SCSS, Javascript, Python",
         "linea-rosa-academy-frameworks": "Odoo 14 custom extended eLearning module, Bootstrap, Font Awesome Icons",
         "linea-rosa-academy-functionalities": "User registration, Forms, Validations, Videos, Gamification, Automatic email sending and Languages"
+    },
+    "contact-me": {
+        "contact-me-title": "Contact Me",
+        "o-letter": "or",
+        "main-title": "Send me a message!",
+        "email-text": "Email",
+        "message-text": "Message (optional)",
+        "button-text": "Send"
     }    
 }
