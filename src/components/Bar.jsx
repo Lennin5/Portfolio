@@ -5,11 +5,13 @@ const ProgressBar = () => {
     
   const { scrollYProgress } = useScroll()
   return (
-    <div>
+    <>
+    <div className="">
       {/* Linear progress bar application */}
       <motion.div className="progress-bar" 
-      style={{ scaleX: scrollYProgress }} />          
+      style={{ scaleX: scrollYProgress }} />
     </div>
+    </>
   )
 }
 

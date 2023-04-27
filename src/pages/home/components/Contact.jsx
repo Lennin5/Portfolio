@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
-
+import { motion } from 'framer-motion'
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+import { 
+  item_showHidden,
+  container_delay_childrens_1,
+  container_delay_childrens_2,
+} from '../../../hooks/FramerMotionAnimations'
 
 export default function Contact() {
 
@@ -108,24 +114,31 @@ export default function Contact() {
   }    
 
   return (
-    <>
+    <div className="mt-2">
     <ToastContainer transition={Bounce} />
-      <div className="row d-flex justify-content-center mb-10">
-        <div className="col-12">
-          <div className="row mb-2">
+      {/* <motion.div className="row d-flex justify-content-center mb-10" initial="initial" whileInView="animate" viewport={{ once: false }}>
+        <motion.div className="col-12" variants={container_delay_childrens_1}>
+          <motion.div className="row mb-2" variants={item_showHidden}>
             <span className="fs-3 text-white fw-bolder">
               <i className="fa-solid fa-phone me-2" />
               Contáctame
             </span>
             <hr className="mt-2 text-white" />
-          </div>   
-        </div>
-      </div>  
+          </motion.div>   
+        </motion.div>
+      </motion.div>   */}
 
       <div className="row d-flex justify-content-center mb-10">
-        <div className="col-12">                      
-          <div className="row d-flex justify-content-center">
-            <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-0 mt-lg-0">
+        <motion.div className="col-12" initial="initial" whileInView="animate" viewport={{ once: false }}>
+          <motion.div className="row d-flex justify-content-center" variants={container_delay_childrens_1}>
+          <motion.div className="row mb-10" variants={item_showHidden}>
+            <span className="fs-3 text-white fw-bolder">
+              <i className="fa-solid fa-phone me-2" />
+              Contáctame
+            </span>
+            <hr className="mt-2 text-white" />
+          </motion.div>             
+            <motion.div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-0 mt-lg-0" variants={item_showHidden}>
               <div className="row text-center">
                 <a href={`https://wa.me/${phone_number}`} target="blank" className="text-white text-decoration-none">
                   <div>
@@ -140,8 +153,8 @@ export default function Contact() {
                   </div>
                 </a>
               </div>                             
-            </div>
-            <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+            </motion.div>
+            <motion.div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-4 mt-lg-0" variants={item_showHidden}>
               <div className="row text-center text-white">
                 <div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-envelope-fill" viewBox="0 0 16 16">
@@ -154,8 +167,8 @@ export default function Contact() {
                   </h4>
                 </div>
               </div>                             
-            </div>
-            <div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-4 mt-lg-0">              
+            </motion.div>
+            <motion.div className="col-12 col-sm-12 col-md-6 col-lg-4 mt-4 mt-lg-0" variants={item_showHidden}>
               <div className="row text-center text-white">
                 <a href="https://github.com/Lennin5" target="blank" className="text-white text-decoration-none">
                   <div>
@@ -170,18 +183,14 @@ export default function Contact() {
                   </div>
                 </a>    
               </div>                                       
-            </div>                         
-          </div>         
-
-          <div className="row d-flex justify-content-center mb-10 mt-5">
-            <div className="col-12 col-md-6 col-lg-6">
+            </motion.div>        
+            <motion.div className="col-12 col-md-12 col-lg-6" variants={item_showHidden}>
               <div className="text-center text-white mb-7 mt-5">
-                <span className="fs-4">ó</span>
-                <br />
-                <span className="fs-3">¡Envíame un mensaje!</span>
-              </div>              
-              
-              <form id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="text-white">
+                  <span className="fs-4">ó</span>
+                  <br />
+                  <span className="fs-3">¡Envíame un mensaje!</span>
+              </div> 
+              <form id="mc-embedded-subscrimotion.be-form" name="mc-embedded-subscribe-form" className="text-white">
                 <div className="mb-3">
                   <label htmlFor="exampleInputEmail1" className="form-label fs-5">Correo Electrónico*</label>
                   <input type="email" className="form-control" name="EMAIL" id="mce-EMAIL" aria-describedby="emailHelp" required={true} style={{borderRadius: 10, outline: "none", border: "none"}} onChange={verifyFields} />
@@ -209,12 +218,14 @@ export default function Contact() {
                   )}
                   {!isLoading && <span>Enviar</span>}                     
                 </button>
-              </form>
-            </div>
-          </div> 
+              </form>              
+            </motion.div>
+          </motion.div>         
 
-        </div>
+
+        </motion.div>
+
       </div>
-    </>
+    </div>
   )
 }

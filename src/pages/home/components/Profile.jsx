@@ -17,13 +17,13 @@ export default function Profile() {
   return (
     <>    
     <div className="row text-center mb-10">
-      <div className="row text-center mb-10">
-        <div className="col-12">
+      {/* <div className="row text-center mb-10"> */}
+        <div className="col-12 mb-10">
           <button className="btn btn-dark rounded-1" onClick={downloadPDF}>
             {lg("profile.download-cv")}
           </button>
         </div>       
-      </div>      
+      {/* </div>       */}
       <div className="col-12">
         {/* <span className="fs-3 animate text-white">Me considero un desarrollador web disruptivo en la creación de experiencias digitales atractivas, intuitivas y efectivas, mi lema: <br /> "Piensa en todo, ah! y una cosa más" :)</span> */}
         <span className="fs-3 animate text-white">
@@ -31,7 +31,8 @@ export default function Profile() {
         </span>        
         <br />
         <span className="fs-3 animate text-white">
-          {lg("profile.my-description")}
+          {/* {lg("profile.my-description")} */}
+          <span dangerouslySetInnerHTML={{__html: lg("profile.my-description")}} />
         </span>
       </div>       
     </div>

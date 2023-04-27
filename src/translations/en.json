@@ -4,7 +4,7 @@
     },
     "profile": {
         "my-title": "Hi! I'm Lennin Lemus",
-        "my-description": "I consider myself a disruptive web developer in creating attractive, intuitive, and effective digital experiences. My motto: \"Think of everything, oh! and one more thing\" :)",
+        "my-description": "I consider myself a disruptive web developer in creating attractive, intuitive, and effective digital experiences. My motto: <br /> \"Think of everything, oh! and one more thing\" :)",
         "download-cv": "Download CV",
         "name-title": "Name",
         "age-title": "Age",
@@ -23,5 +23,37 @@
         "technologies-title": "Technologies",
         "other-technologies-title": "Others",
         "learning-technologies-title": "Learning..."
+    },
+    "experience": {
+        "details-title": "View details",
+        "languages-title": "Languages:",
+        "frameworks-title": "Frameworks:",
+        "functionalities-title": "Functionalities:",
+        "link-title": "View website",
+    
+        "vertex-title": "Experience at <a class='text-gray-500' href='https://vertexstudio.co/'>VertexStudio</a>",
+        "vertex-description": "During my two years <b>(Late 2021 to early 2023)</b> as a developer at Vertex, I worked on various projects that included programming web applications in Python using the Odoo 14 framework, creating customized websites, and optimizing the performance of existing websites. I worked closely with a team of designers and other developers to ensure the delivery of high-quality solutions using best practices. <br /><br /> I also learned to develop different areas such as design, maintenance, optimization, and administration of them using the Odoo ERP (Enterprise Resource Planning) environment. <br /><br /> At the same time, I proposed working with the ReactJS and Bootstrap framework for the development of some web applications, which allowed me to learn how to handle it more in real projects and contribute to the company with new ideas.",
+        "projects-title": "Projects",
+    
+        "medixlab-description": " a website for a company that offers medical simulation services to train medical students",
+        "medixlab-languages": "HTML, SCSS, Javascript, Python",
+        "medixlab-frameworks": "Odoo Website Module, Bootstrap, Font Awesome Icons",
+        "medixlab-functionalities": "Forms, Videos, Calendly Integration, Languages",
+    
+        "roboxmaker-description": " a website based on a 3D robot building platform",
+        "roboxmaker-languages": "HTML, SCSS, Javascript, Json",
+        "roboxmaker-frameworks": "React, Bootstrap, Mailchimp",
+        "roboxmaker-functionalities": "Forms, 3D Model Visualization, Animations and Languages",
+    
+        "linea-rosa-description": " a minimalist website for a travel services company made for women",
+        "linea-rosa-languages": "HTML, SCSS, Javascript, Json",
+        "linea-rosa-frameworks": "React, Bootstrap, Mailchimp, EmailJS, Font Awesome Icons",
+        "linea-rosa-functionalities": "Forms, WhatsApp links, Languages, Automatic email sending",
+    
+        "linea-rosa-academy-title": "Linea Rosa Academy,",
+        "linea-rosa-academy-description": " a demo web application for online learning with a gamification-style video game theme",
+        "linea-rosa-academy-languages": "Xml, Qweb (programmatic Html), SCSS, Javascript, Python",
+        "linea-rosa-academy-frameworks": "Odoo 14 custom extended eLearning module, Bootstrap, Font Awesome Icons",
+        "linea-rosa-academy-functionalities": "User registration, Forms, Validations, Videos, Gamification, Automatic email sending and Languages"
     }    
 }

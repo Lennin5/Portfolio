@@ -25,9 +25,43 @@
         "learning-technologies-title": "Aprendiendo..."
     },
     "experience": {
+        "details-title": "Ver detalles",
+        "languages-title": "Lenguajes:",
+        "frameworks-title": "Frameworks:",
+        "functionalities-title": "Funcionalidades:",
+        "link-title": "Ver sitio web",
+
         "vertex-title": "Experiencia en <a class='text-gray-500' href='https://vertexstudio.co/'>VertexStudio</a>",
         "vertex-description": "Durante mis dos años <b>(Finales de 2021 e inicios de 2023)</b> como desarrollador en Vertex, trabajé en diversos proyectos que incluyeron la programación de aplicaciones web en lenguaje Python utilizando el framework Odoo 14, la creación de sitios web personalizados y la optimización del rendimiento de sitios web existentes. Trabajé en estrecha colaboración con un equipo de diseñadores y otros desarrolladores para asegurar la entrega de soluciones de alta calidad usando las mejores prácticas. <br /><br /> Aprendí también a desarrollar diferentes áreas como el diseño, el mantenimiendo, la optimización y la administración de los mismos utilizando el entorno ERP (Enterprice Resource Planning) de Odoo. <br /><br /> A la vez propuse trabajar con el framework de ReactJS y bootstrap para el desarrollo de algunas aplicaciones web, lo que me permitió aprender a manejarlo más en proyectos reales y aportar a la empresa con nuevas ideas.",
         "projects-title": "Proyectos",
-        "medixlab-description": ", una página web para una empresa que ofrece servicios de simulación médica para formar estudiantes de medicina"
+
+        "medixlab-description": " una página web para una empresa que ofrece servicios de simulación médica para formar estudiantes de medicina",
+        "medixlab-languages": "HTML, SCSS, Javascript, Python",
+        "medixlab-frameworks": "Módulo Website de Odoo, Bootstrap, Font Awesome Icons",
+        "medixlab-functionalities": "Formularios, Videos, Integración de Calendly, Idiomas",
+
+        "roboxmaker-description": " una página web basada en una plataforma de armado de robots en 3D",
+        "roboxmaker-languages": "HTML, SCSS, Javascript, Json",
+        "roboxmaker-frameworks": "React, Bootstrap, Mailchimp",
+        "roboxmaker-functionalities": "Formularios, Visualización de modelos 3D, Animaciones e Idiomas",
+
+        "linea-rosa-description": " una página web minimalista para una empresa de servicios de viajes hecho para mujeres",
+        "linea-rosa-languages": "HTML, SCSS, Javascript, Json",
+        "linea-rosa-frameworks": "React, Bootstrap, Mailchimp, EmailJS, Font Awesome Icons",
+        "linea-rosa-functionalities": "Formularios, Enlaces a Whatsapp, Idiomas, Envío de correos automáticos",
+
+        "linea-rosa-academy-title": "Academia Línea rosa,",
+        "linea-rosa-academy-description": " una aplicación web demo de aprendizaje en línea con temática de videojuego estilo gamificación",
+        "linea-rosa-academy-languages": "Xml, Qweb (Html programativo), SCSS, Javascript, Python",
+        "linea-rosa-academy-frameworks": "Módulo custom extendido de eLearning de Odoo 14, Bootstrap, Font Awesome Icons",
+        "linea-rosa-academy-functionalities": "Registro de usuarios, Formularios, Validaciones, Videos, Gamificación, Envío de correos automáticos e Idiomas"
+    },
+    "contact-me": {
+        "contact-me-title": "Contáctame",
+        "o-letter": "ó",
+        "main-title": "¡Envíame un mensaje!",
+        "email-text": "Ccorreo electrónico",
+        "message-text": "Mensaje (opcional)",
+        "button-text": "Enviar"
     }
 }

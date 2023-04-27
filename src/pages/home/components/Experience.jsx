@@ -110,7 +110,7 @@ export default function Experience() {
                     <span className="fs-6 text-medixlab-color mb-2">
                       <a href="https://medixlab.vxr.space/" target="blank" className="text-medixlab-color fw-bolder">
                         <i className="fa-solid fa-user-doctor me-2 fs-4" />
-                        <b>Medixlab</b>
+                        <b>Medixlab,</b>
                       </a>
                       <span className="text-decoration-none" dangerouslySetInnerHTML={{__html: lg('experience.medixlab-description')}} />
                     </span>
@@ -124,27 +124,27 @@ export default function Experience() {
                         :
                         <i className="fa-solid fa-chevron-down me-2" />
                       }
-                      Ver detalles
+                      {lg('experience.details-title')}
                     </button>
                     <div className="collapse mt-2" id="collapseMedixlabDetails" >
                       <div className="card card-body pt-7 border-medixlab-color" style={{borderRadius: 20}}>
                         <ul className="fs-7 text-medixlab-color text-start" style={{listStyle: "none"}}>
                           <li className="pb-2">
                             <i className="fa-solid fa-code me-2" />
-                            <b>Lenguajes:</b> HTML, SCSS, Javascript, Python
+                            <b>{lg('experience.languages-title')}</b> {lg('experience.medixlab-languages')}
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-palette me-2" />
-                            <b>Frameworks:</b> Módulo Website de Odoo, Bootstrap, Font Awesome Icons
+                            <b>{lg('experience.frameworks-title')}</b> {lg('experience.medixlab-frameworks')}
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-cube me-2" />
-                            <b>Funcionalidades:</b> Formularios, Videos, Integración de Calendly, Idiomas
+                            <b>{lg('experience.functionalities-title')}</b> {lg('experience.medixlab-functionalities')}
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-link me-2" />
                             <a href="https://medixlab.vxr.space/" className="text-medixlab-color" target="_blank" rel="noreferrer">
-                              <b>Ver sitio web</b>
+                              <b>{lg('experience.link-title')}</b>
                             </a>
                           </li>
                         </ul>
@@ -192,7 +192,9 @@ export default function Experience() {
                   </div>                  
                   <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-3">
                     <span className="fs-6 text-roboxmaker-color mb-2">
-                    <a href="https://roboxmaker.app/" className="text-roboxmaker-color" target="blank"><b><i className="fa-solid fa-robot me-2 fs-4" />Roboxmaker,</b></a> una página web basada en una plataforma de armado de robots en 3D
+                    <a href="https://roboxmaker.app/" className="text-roboxmaker-color" target="blank">
+                      <b><i className="fa-solid fa-robot me-2 fs-4" />Roboxmaker,</b></a> 
+                      <span className="text-decoration-none" dangerouslySetInnerHTML={{__html: lg('experience.roboxmaker-description')}} />
                     </span>
                     <br /><br />
                     <button className="btn btn-primary bg-roboxmaker-color" type="button" 
@@ -204,27 +206,27 @@ export default function Experience() {
                         :
                         <i className="fa-solid fa-chevron-down me-2" />
                       }
-                      Ver detalles
+                      {lg('experience.details-title')}
                     </button>
                     <div className="collapse mt-2" id="collapseRoboxmakerDetails" >
                       <div className="card card-body pt-7 border-roboxmaker-color" style={{borderRadius: 20}}>
                         <ul className="fs-7 text-roboxmaker-color text-start" style={{listStyle: "none"}}>
                           <li className="pb-2">
                             <i className="fa-solid fa-code me-2" />
-                            <b>Lenguajes:</b> HTML, SCSS, Javascript, Json
+                            <b>{lg('experience.languages-title')}</b> {lg('experience.roboxmaker-languages')}
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-palette me-2" />
-                            <b>Frameworks:</b> React, Bootstrap, Mailchimp
+                            <b>{lg('experience.frameworks-title')}</b> {lg('experience.roboxmaker-frameworks')}
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-cube me-2" />
-                            <b>Funcionalidades:</b> Formularios, Visualización de modelos 3D, Animaciones e Idiomas
+                            <b>{lg('experience.functionalities-title')}</b> {lg('experience.roboxmaker-functionalities')}
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-link me-2" />
                             <a href="https://roboxmaker.app/" className="text-roboxmaker-color" target="_blank" rel="noreferrer">
-                              <b>Ver sitio web</b>
+                              <b>{lg('experience.link-title')}</b>
                             </a>
                           </li>
                         </ul>
@@ -275,7 +277,9 @@ export default function Experience() {
                   </div>                  
                   <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-3">
                     <span className="fs-6 text-lila-dark mb-2">
-                    <a href="https://linearosa.app/" className="text-lila-dark" target="blank"><b><i className="fa-solid fa-location-dot me-2 fs-4" />Línea Rosa,</b></a> una página web minimalista para una empresa de servicios de viajes hecho para mujeres
+                    <a href="https://linearosa.app/" className="text-lila-dark" target="blank">
+                      <b><i className="fa-solid fa-location-dot me-2 fs-4" />Línea Rosa,</b></a> 
+                      <span className="text-lila-dark" dangerouslySetInnerHTML={{__html: lg('experience.linea-rosa-description')}} />
                     </span>
                     <br /><br />
                     <button className="btn btn-primary bg-lila-dark" type="button" 
@@ -287,27 +291,27 @@ export default function Experience() {
                         :
                         <i className="fa-solid fa-chevron-down me-2" />
                       }
-                      Ver detalles
+                      {lg('experience.details-title')}
                     </button>
                     <div className="collapse mt-2" id="collapseLineaRosaDetails" >
                       <div className="card card-body pt-7 border-lila-dark" style={{borderRadius: 20}}>
                         <ul className="fs-7 text-lila-dark text-start" style={{listStyle: "none"}}>
                           <li className="pb-2">
                             <i className="fa-solid fa-code me-2" />
-                            <b>Lenguajes:</b> HTML, SCSS, Javascript, Json
+                            <b>{lg('experience.languages-title')}</b> {lg('experience.linea-rosa-languages')}
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-palette me-2" />
-                            <b>Frameworks:</b> React, Bootstrap, Mailchimp, EmailJS, Font Awesome Icons
+                            <b>{lg('experience.frameworks-title')}</b> {lg('experience.linea-rosa-frameworks')}
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-cube me-2" />
-                            <b>Funcionalidades:</b> Formularios, Enlaces a Whatsapp, Idiomas, Envío de correos automáticos
+                            <b>{lg('experience.functionalities-title')}</b> {lg('experience.linea-rosa-functionalities')}
                           </li>
                           <li className="pb-2">
                             <i className="fa-solid fa-link me-2" />
                             <a href="https://linearosa.app/" className="text-lila-dark" target="_blank" rel="noreferrer">
-                              <b>Ver sitio web</b>
+                              <b>{lg('experience.link-title')}</b>
                             </a>
                           </li>
                         </ul>
@@ -360,8 +364,8 @@ export default function Experience() {
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 mt-3">
                   <span className="fs-6 text-pink mb-2">
                   <a href="https://academialinearosa.com/web/login" target="blank" className="text-pink"><b>
-                    <i className="fa-solid fa-graduation-cap me-2 fs-4" />Academia Línea Rosa,</b></a> una 
-                    aplicación web demo de aprendizaje en línea con temática de videojuego estilo gamificación
+                    <i className="fa-solid fa-graduation-cap me-2 fs-4" />{lg('experience.linea-rosa-academy-title')}</b></a> 
+                    {lg('experience.linea-rosa-academy-description')}
                   </span>
                   <br /><br />
                   <button className="btn btn-primary bg-pink" type="button" 
@@ -373,27 +377,27 @@ export default function Experience() {
                       :
                       <i className="fa-solid fa-chevron-down me-2" />
                     }
-                    Ver detalles
+                    {lg('experience.details-title')}
                   </button>
                   <div className="collapse mt-2" id="collapseLineaRosaAcademyDetails" >
                     <div className="card card-body pt-7 border-pink" style={{borderRadius: 20}}>
                       <ul className="fs-7 text-pink text-start" style={{listStyle: "none"}}>
                         <li className="pb-2">
                           <i className="fa-solid fa-code me-2" />
-                          <b>Lenguajes:</b> Xml, Qweb (Html programativo), SCSS, Javascript, Python
+                          <b>{lg('experience.languages-title')}</b> {lg('experience.linea-rosa-academy-languages')}
                         </li>
                         <li className="pb-2">
                           <i className="fa-solid fa-palette me-2" />
-                          <b>Frameworks:</b> Módulo custom extendido de eLearning de Odoo 14, Bootstrap, Font Awesome Icons
+                          <b>{lg('experience.frameworks-title')}</b> {lg('experience.linea-rosa-academy-frameworks')}
                         </li>
                         <li className="pb-2">
                           <i className="fa-solid fa-cube me-2" />
-                          <b>Funcionalidades:</b> Registro de usuarios, Formularios, Validaciones, Videos,  Gamificación, Envío de correos automáticos e Idiomas
+                          <b>{lg('experience.functionalities-title')}</b> {lg('experience.linea-rosa-academy-functionalities')}
                         </li>
                         <li className="pb-2">
                           <i className="fa-solid fa-link me-2" />
                           <a href="https://academialinearosa.com/web/login" className="text-pink" target="_blank" rel="noreferrer">
-                            <b>Ver sitio web</b>
+                            <b>{lg('experience.link-title')}</b>
                           </a>
                         </li>
                       </ul>

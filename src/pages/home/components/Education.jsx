@@ -160,8 +160,8 @@ export default function Education() {
           <motion.div className="row mb-10 mt-5" variants={item_showHidden}>
             <span className="fs-4 text-white fw-bolder">
               {/* <i className="fa-solid fa-spinner me-2" /> */}
-              <div class="spinner-border text-light me-2 " role="status">
-                <span class="visually-hidden">Loading...</span>
+              <div className="spinner-border text-light me-2 " role="status">
+                <span className="visually-hidden">Loading...</span>
               </div>              
               {lg('education.learning-technologies-title')}
             </span>

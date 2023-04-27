@@ -20,7 +20,7 @@ html, body {
   left: 0;
   right: 0;
   height: 9px;
-  background: rgb(255, 255, 255) !important;
+  background: #ffffff !important;
   transform-origin: 0%;
 }
 
@@ -59,7 +59,8 @@ html, body {
   font-size: 6em;
   text-align: center;
   color: #FFF;
-  opacity: 0.97;
+  // opacity: 0.99; // produce un bug al hacer scroll
+  opacity: 1 !important;
   border-radius: 20px;
   transition: transform 1s;  
 }
@@ -76,7 +77,7 @@ html, body {
 }
 
 .b {
-  transform: rotateY(90deg) translateZ(250px) rotateY(-90deg);
+  transform: rotateY(90deg) translateZ(250px) rotateY(-90deg);  
 }
 
 .b .item-x {
@@ -166,7 +167,7 @@ html, body {
 }
 .buttons-3{
   color: #fff;
-  background-color: #00d4efde;  
+  background-color: #00bfd8;  
   transition: 0.5s;
 }
 
