@@ -11,21 +11,21 @@ export default function Header(){
   // const { IsMainView } = props;
 
   // Dinamic navbar color change on scroll
-  window.onscroll = function () { changeNavbarColor() };
-  function changeNavbarColor() {
-     // get two navbars, desktop and mobile
-    var elements = document.getElementsByClassName('navbar-mobile-mode');
-    // console.log(document.body.scrollTop);
-    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {      
-      for(var i = 0; i < elements.length; i++){
-        // elements[i].style.backgroundColor = "#000000f5";
-      }
-    } else {
-      for(var i = 0; i < elements.length; i++){
-        // elements[i].style.backgroundColor = "transparent";
-      }
-    }
-  }
+  // window.onscroll = function () { changeNavbarColor() };
+  // function changeNavbarColor() {
+  //    // get two navbars, desktop and mobile
+  //   var elements = document.getElementsByClassName('navbar-mobile-mode');
+  //   // console.log(document.body.scrollTop);
+  //   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {      
+  //     for(var i = 0; i < elements.length; i++){
+  //       // elements[i].style.backgroundColor = "#000000f5";
+  //     }
+  //   } else {
+  //     for(var i = 0; i < elements.length; i++){
+  //       // elements[i].style.backgroundColor = "transparent";
+  //     }
+  //   }
+  // }
 
   // i18n current language
   const [language, setlanguage] = useState(i18next.language);
