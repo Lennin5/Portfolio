@@ -31,7 +31,7 @@ import LineaRosaAcademyMobileBg from '../../../assets/img/experience/linea-rosa-
 
 import ListRobots from './ListRobots';
 
-import {useMediaSm} from '../../../hooks/useMediaQuery';
+import {useMediaSm} from '../../../hooks/use_media_query';
 
 export default function Experience() {
 

@@ -1,51 +1,16 @@
-// import $ from 'jquery';
-
-// // cuando cargue la pagina
-// window.onload = function() {
-
-//   var carousel = $(".carousel"),
-//       items = $(".item-x"),
-//       currdeg  = 0;
-
-//   $(".next").on("click", { d: "n" }, rotate);
-//   $(".prev").on("click", { d: "p" }, rotate);
-
-//   function rotate(e){
-//     if(e.data.d=="n"){
-//       currdeg = currdeg - 60;
-//     }
-//     if(e.data.d=="p"){
-//       currdeg = currdeg + 60;
-//     }
-//     carousel.css({
-//       "-webkit-transform": "rotateY("+currdeg+"deg)",
-//       "-moz-transform": "rotateY("+currdeg+"deg)",
-//       "-o-transform": "rotateY("+currdeg+"deg)",
-//       "transform": "rotateY("+currdeg+"deg)"
-//     });
-//       items.css({
-//       "-webkit-transform": "rotateY("+(-currdeg)+"deg)",
-//       "-moz-transform": "rotateY("+(-currdeg)+"deg)",
-//       "-o-transform": "rotateY("+(-currdeg)+"deg)",
-//       "transform": "rotateY("+(-currdeg)+"deg)"
-//     });
-//   }
-
-// };
-
 import $ from 'jquery';
 
-// cuando cargue la pagina
+// On load window
 window.onload = function() {
 
-  var carousel = $(".carousel"),
-      items = $(".item-x"),
-      currdeg  = 0;
+  // Carousel
+  
+  var carousel = $(".carousel");
+  var items = $(".item-x");
+  var currdeg  = 0;
 
   $(".next").on("click", { d: "n" }, rotate);
   $(".prev").on("click", { d: "p" }, rotate);
-
-  // 
 
   function rotate(e){
     if(e.data.d=="n"){
@@ -68,7 +33,7 @@ window.onload = function() {
     });
   }
 
-
+  // Aleatory text animation
 
   animateElements();
 
@@ -105,8 +70,6 @@ window.onload = function() {
       }, 50);
   }
   
-  function getRandomLetter() {}
-  
   function animateElements() {
       const elements = document.getElementsByClassName("animate");
   
@@ -123,15 +86,15 @@ window.onload = function() {
       }
   }  
 
-  // Pasar a la siguiente seccion del carrusel con las flechas del teclado
+  // Go to next carousel item with keyboard arrows
   window.addEventListener("keydown", function(event) {
     var prev_carousel_item = document.getElementById("prev-carousel-item");
     var next_carousel_item = document.getElementById("next-carousel-item");
 
-    if (event.key === "ArrowLeft") { // Flecha izquierda
+    if (event.key === "ArrowLeft") { // Left arrow
         prev_carousel_item.click();
     }
-    else if (event.key === "ArrowRight") { // Flecha derecha
+    else if (event.key === "ArrowRight") { // Right arrow
         next_carousel_item.click();
     }
   });  

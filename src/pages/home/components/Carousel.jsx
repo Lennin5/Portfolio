@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { motion } from 'framer-motion';
 import TypeIt from "typeit-react";
@@ -20,9 +20,9 @@ import {
   topToInitial_2s,
   showPrevButton,
   showNextButton,
-} from '../../../hooks/FramerMotionAnimations'
+} from '../../../hooks/framer_motion_animations.js'
 
-import {useMediaSm} from '../../../hooks/useMediaQuery';
+import {useMediaSm} from '../../../hooks/use_media_query.js';
 
 export default function Carousel(){
 

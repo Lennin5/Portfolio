@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { 
   item_showHidden,
   container_delay_childrens_1,
-} from '../../../hooks/FramerMotionAnimations'
+} from '../../../hooks/framer_motion_animations'
 
 export default function Contact() {
 

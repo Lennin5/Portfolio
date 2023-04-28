@@ -27,7 +27,7 @@ import HasuraLogo from '../../../assets/img/education/technologies/hasura.png'
 import { 
   item_showHidden,
   container_delay_childrens_1,
-} from '../../../hooks/FramerMotionAnimations'
+} from '../../../hooks/framer_motion_animations'
 
 export default function Education() {
 
