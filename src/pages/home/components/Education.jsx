@@ -36,7 +36,7 @@ export default function Education() {
 
   return (
     <>
-      <motion.div className="row mb-10 mt-5" initial="initial" whileInView="animate" viewport={{ once: false }}>
+      <motion.div className="row mb-10" initial="initial" whileInView="animate" viewport={{ once: false }}>
         <motion.div className="col-12" variants={container_delay_childrens_1}>
 
           <motion.div className="row mb-2" variants={item_showHidden}>
@@ -49,7 +49,7 @@ export default function Education() {
           <div className="row d-flex justify-content-around">
             <motion.div className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center text-center">
-                <img className="education-logo" src={EmpleatechLogo} alt="" />
+                <img className="education-logo-item" src={EmpleatechLogo} alt="" />
                 <motion.span className="fs-6 text-gray-700" variants={item_showHidden}>
                 {lg('education.empleatech-description')} <br />
                 -2019
@@ -58,7 +58,7 @@ export default function Education() {
             </motion.div>              
             <motion.div variants={item_showHidden} className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center text-center">
-                <img className="education-logo" src={PlatziLogo} alt="" />
+                <img className="education-logo-item" src={PlatziLogo} alt="" />
                 <span className="fs-6 text-gray-700">
                 {lg('education.platzi-description')} <br />
                 -2020
@@ -67,7 +67,7 @@ export default function Education() {
             </motion.div>              
             <motion.div variants={item_showHidden} className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center text-center">
-                <img className="education-logo mb-2" src={EsfeLogo} alt="" />
+                <img className="education-logo-item mb-2" src={EsfeLogo} alt="" />
                 <span className="fs-6 text-gray-700">
                 {lg('education.esfe-description')} <br />
                 -2020, 2021
@@ -87,7 +87,7 @@ export default function Education() {
             <div className="col-12 col-sm-12 col-md-11 col-lg-11 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center align-items-center text-center text-lg-start">
                 <div className="col-12 col-sm-12 col-md-4 col-lg-2">
-                <img className="education-logo" src={CimatLogo} alt="" />
+                <img className="education-logo-item" src={CimatLogo} alt="" />
                 </div>
                 <motion.div className="col-12 col-sm-12 col-md-8 col-lg-10" variants={item_showHidden}>
                   <span className="fs-6 text-gray-700">
@@ -114,19 +114,19 @@ export default function Education() {
           </motion.div>                  
           <div className="row d-flex justify-content-center">
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-                <img className="technology-logo" src={HtmlLogo} alt="Html Logo" />
+                <img className="technology-logo-item" src={HtmlLogo} alt="Html Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-                <img className="technology-logo" src={PythonLogo} alt="Css Logo" />
+                <img className="technology-logo-item" src={PythonLogo} alt="Css Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-                <img className="technology-logo" src={ReactLogo} alt="React Logo" />
+                <img className="technology-logo-item" src={ReactLogo} alt="React Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-                <img className="technology-logo" src={BootstrapLogo} alt="Sql Logo" />
+                <img className="technology-logo-item" src={BootstrapLogo} alt="Sql Logo" />
             </motion.div>     
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-                <img className="technology-logo" src={FirebaseLogo} alt="Js Logo" />
+                <img className="technology-logo-item" src={FirebaseLogo} alt="Js Logo" />
             </motion.div>                               
           </div>
 
@@ -139,19 +139,19 @@ export default function Education() {
           </motion.div>        
           <div className="row d-flex justify-content-center">            
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-              <img className="technology-logo" src={GithubLogo} alt="Html Logo" />
+              <img className="technology-logo-item" src={GithubLogo} alt="Html Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-                <img className="technology-logo" src={GitLogo} alt="Html Logo" />
+                <img className="technology-logo-item" src={GitLogo} alt="Html Logo" />
             </motion.div>             
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-              <img className="technology-logo" src={SqlLogo} alt="Html Logo" />
+              <img className="technology-logo-item" src={SqlLogo} alt="Html Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-              <img className="technology-logo" src={PhotoshopLogo} alt="Html Logo" />
+              <img className="technology-logo-item" src={PhotoshopLogo} alt="Html Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-              <img className="technology-logo" src={FigmaLogo} alt="Html Logo" />
+              <img className="technology-logo-item" src={FigmaLogo} alt="Html Logo" />
             </motion.div>            
           </div>
 
@@ -167,13 +167,13 @@ export default function Education() {
           </motion.div>           
           <div className="row d-flex justify-content-center">
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-3" variants={item_showHidden}>
-              <img className="technology-logo" src={RustLogo} alt="Html Logo" />
+              <img className="technology-logo-item" src={RustLogo} alt="Html Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-3" variants={item_showHidden}>
-              <img className="technology-logo" src={YewLogo} alt="Html Logo" />
+              <img className="technology-logo-item" src={YewLogo} alt="Html Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-3" variants={item_showHidden}>
-              <img className="technology-logo" src={HasuraLogo} alt="Html Logo" />
+              <img className="technology-logo-item" src={HasuraLogo} alt="Html Logo" />
             </motion.div>
           </div>
 

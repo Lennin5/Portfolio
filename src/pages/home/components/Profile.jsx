@@ -42,7 +42,7 @@ export default function Profile() {
             <div className="card-body">
               <div className="row d-flex justify-content-center">
                 <div className='col-12 col-md-6'> 
-                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 icon-item">
+                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 profile-item">
                         <div className="column text-center">
                           <i className="fa-solid fa-user fa-user-icon btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                           <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
@@ -54,7 +54,7 @@ export default function Profile() {
                         </div>
                     </div>   
                     <br />
-                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 icon-item">
+                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 profile-item">
                         <div className="column text-center">
                           <i className="fa-solid fa-user-tag btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                           <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
@@ -68,7 +68,7 @@ export default function Profile() {
                     <br />                                    
                   </div>
                   <div className='col-12 col-md-6'> 
-                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 icon-item">
+                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 profile-item">
                           <div className="column text-center">
                             <i className="fa-solid fa-location-dot btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                             <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
@@ -83,7 +83,7 @@ export default function Profile() {
                           </div>
                       </div>    
                       <br />              
-                      <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 icon-item">
+                      <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 profile-item">
                           <div className="column text-center">
                             <i className="fa-solid fa-earth-americas btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                             <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>
@@ -97,7 +97,7 @@ export default function Profile() {
                   </div>
                   <br />
                   <div className="col-12">
-                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 icon-item">
+                    <div className="fs-5 d-flex align-items-center justify-content-center text-left mb-5 profile-item">
                           <div className="column text-center">
                             <i className="fa-solid fa-phone btn-circle bg-gray-900 text-white me-2 pt-4 text-center" />                        
                             <div className="row d-flex justify-content-start" style={{lineHeight: 1.2}}>

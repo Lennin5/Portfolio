@@ -1,0 +1,50 @@
+// Main component
+
+.custom-container {
+    margin: 0 auto;
+    width: 250px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;
+}
+  
+.custom-carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;  
+}
+  
+.custom-carousel div {
+    transform-style: preserve-3d;
+}
+  
+.custom-carousel-item {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    font-size: 6em;
+    text-align: center;
+    color: #FFF;
+    // opacity: 0.99; // produce a bug when scrolling
+    opacity: 1;
+    border-radius: 20px;
+    transition: transform 1s;  
+    background: transparent;
+    object-fit: cover;
+}
+  
+.carousel-item-profile {
+    transform: rotateY(0deg) translateZ(250px) rotateY(0deg);
+}
+.carousel-item-education {
+    transform: rotateY(90deg) translateZ(250px) rotateY(-90deg);  
+}
+.carousel-item-experience {
+    transform: rotateY(180deg) translateZ(250px) rotateY(-180deg);
+}
+.carousel-item-contact {
+    transform: rotateY(270deg) translateZ(250px) rotateY(-270deg);
+}

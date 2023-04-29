@@ -3,7 +3,7 @@ import TypeIt from "typeit-react";
 import i18next from 'i18next';
 
 // import ProgressBar from './ProgressBar';
-import ProgressBar from './Bar'
+import ProgressBar from './ProgressBar'
 import EnglandFlag from '../assets/img/flags/England.png';
 import SpainFlag from '../assets/img/flags/Spain.png';
 

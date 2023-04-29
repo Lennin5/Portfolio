@@ -5,8 +5,8 @@ window.onload = function() {
 
   // Carousel
   
-  var carousel = $(".carousel");
-  var items = $(".item-x");
+  var carousel = $(".custom-carousel");
+  var items = $(".custom-carousel-item");
   var currdeg  = 0;
 
   $(".next").on("click", { d: "n" }, rotate);

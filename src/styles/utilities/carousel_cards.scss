@@ -1,0 +1,27 @@
+.custom-carousel-card{
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    transition: 1s;
+}
+
+.custom-card-text{
+    font-size: large;  
+    line-height: 0 ;
+    width: 100% ;
+    margin-top: 50px ;
+}
+// .legend-platform-text{
+//     @extend .cards-text;
+//     background-color: #000 ;
+// }
+.custom-carousel-card-education-text{
+    @extend .custom-card-text;
+}
+.custom-carousel-card-experience-text{
+    @extend .custom-card-text;
+}
+.custom-carousel-card-contact-text{
+    @extend .custom-card-text;
+}

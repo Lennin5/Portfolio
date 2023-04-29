@@ -1,0 +1,86 @@
+// Cards project section
+.card-project {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+.card-project .parallax-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translateZ(0);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+}
+.card-project .parallax-effect:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.4) 50%,rgba(0,0,0,0.8) 100%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.card-project:hover .parallax-effect:before {
+  opacity: 1;
+}
+
+// RobotViewer section
+model-viewer {
+    --progress-bar-color: transparent;  
+  }
+  .robot-container{
+    height: 300px;
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  .robot{
+    background-color: transparent !important;
+    width: 180px;
+    height: 180px;
+    top: -10px;
+  }
+  .robot-small{
+    background-color: transparent !important;
+    width: 160px;
+    height: 160px;
+    top: -10px;
+  }
+  .robot-selected{
+    scale: 0.9;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .horizontal-scroll-container-of-small-robots {
+    max-width: 100vw;
+    overflow-x: scroll;
+    position: relative;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+  }
+  
+  .horizontal-scroll-container-of-small-robots::-webkit-scrollbar {
+    height: 7px;     
+  }  
+  
+  .horizontal-scroll-container-of-small-robots::-webkit-scrollbar-thumb {
+    background-color: rgb(159, 107, 250);
+    border-radius: 10px;
+  }
+  
+  .horizontal-row-robots {
+    display: flex;
+  }

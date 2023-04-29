@@ -1,0 +1,20 @@
+// Hover effect for information profile items
+.profile-item > div {
+    transition: 1s;
+}
+.profile-item > div * {
+    transition: 1s;
+}
+
+.profile-item:hover > div > i{
+    box-shadow: 0 0 0 0.2rem #fff;
+    transition: 1s;
+}
+.profile-item:hover > div > div > span {
+    font-size: 1.5rem !important;
+    transition: 1s;
+}
+.profile-item:hover > div > div > p {
+    font-size: 1.5rem !important;
+    transition: 1s;
+}

@@ -120,8 +120,7 @@ export default function Carousel(){
       document.body.style.background = imageNumber === 1 && `linear-gradient(180deg, #19c19f 0%, #442A98 80%)`;
       document.body.style.background = imageNumber === 2 && `linear-gradient(180deg, #780193 0%, #e6008a 10%, #780193 15%)`;
       document.body.style.background = imageNumber === 3 && `linear-gradient(180deg, #6509C6 0%, #00A1CB 80%)`;
-    };
-    
+    };  
 
   return (
     <>
@@ -157,11 +156,11 @@ export default function Carousel(){
             </motion.div>
           </motion.div>
           <motion.div className="col-md-12 order-md-3 col-lg-8 order-lg-2" initial="initial" whileInView="animate" viewport={{ once: true }}>
-            <div className="container-x mt-10">
-            <div className="carousel">
-              <div className="a access-card">
-                <motion.div className='layer1' variants={topToInitial_1s}>
-                <div className="item-x sectionn ec shadow-lg" style={{background: `url(${Profile})`, backgroundPosition: "initial"}}>
+            <div className="custom-container mt-10">
+            <div className="custom-carousel">
+              <div className="carousel-item-profile">
+                <motion.div className='card-floating-profile' variants={topToInitial_1s}>
+                <div className="custom-carousel-item custom-carousel-card ec shadow-lg" style={{background: `url(${Profile})`, backgroundPosition: "initial"}}>
                     {/* <p className="bottom-left">Soy Lennin Lemus</p> */}
                     <div style={{paddingTop: 130}}>
                     {/* <TypeIt className="legend-platform-text"                                              
@@ -179,11 +178,11 @@ export default function Carousel(){
                   </div> 
                   </motion.div>
               </div>
-              <div className="b access-card">
-                <motion.div className="layer2" variants={topToInitial_1_5s}>
-                  <div className="item-x sectionn ec shadow-lg" id="education-img" style={{background: `url(${Education})`, backgroundPosition: "initial", filter: `grayscale(100%)`}}>
+              <div className="carousel-item-education">
+                <motion.div className="card-floating-education" variants={topToInitial_1_5s}>
+                  <div className="custom-carousel-item custom-carousel-card ec shadow-lg" id="education-img" style={{background: `url(${Education})`, backgroundPosition: "initial", filter: `grayscale(100%)`}}>
                     <div style={{paddingTop: 0, display: lg("key.language") === 'es' ? "block" : "none"}}>
-                        <TypeIt className="formation-text"                                              
+                        <TypeIt className="custom-carousel-card-education-text"                                              
                             options={{
                                 strings: ["<b>FORMACIÓN</b>", "<b>HABILIDADES</b>"],
                                 speed: 200,
@@ -196,7 +195,7 @@ export default function Carousel(){
                         />
                     </div>
                     <div style={{paddingTop: 0, display: lg("key.language") === 'en' ? "block" : "none"}}>
-                        <TypeIt className="formation-text"                                              
+                        <TypeIt className="custom-carousel-card-education-text"                                              
                             options={{
                                 strings: ["<b>EDUCATION</b>", "<b>SKILLS</b>"],
                                 speed: 200,
@@ -211,44 +210,43 @@ export default function Carousel(){
                   </div>  
                 </motion.div>  
               </div>
-              <div className="c access-card">
-                <motion.div className="layer3" variants={topToInitial_2s}>
-                  <div className="item-x sectionn ec shadow-lg" style={{background: `url(${Experience})`, backgroundPosition: "initial"}}>
+              <div className="carousel-item-experience">
+                <motion.div className="card-floating-experience" variants={topToInitial_2s}>
+                  <div className="custom-carousel-item custom-carousel-card ec shadow-lg" style={{background: `url(${Experience})`, backgroundPosition: "initial"}}>
                     <div style={{paddingTop: 0, display: lg("key.language") === 'es' ? "block" : "none"}}>
-                    <TypeIt className="experience-text"                                              
-                            options={{
-                                strings: ["<b>¡Mi paso por Vertex!</b>", "<b>Experiencias...</b>"],
-                                speed: 150,
-                                loop: true, 
-                                breakLines: false,
-                                cursorChar: "|",
-                                html: true,
-                                loopDelay: 5000
-                            }}
-                        />    
+                      <TypeIt className="custom-carousel-card-experience-text"                                              
+                              options={{
+                                  strings: ["<b>¡Mi paso por Vertex!</b>", "<b>Experiencias...</b>"],
+                                  speed: 150,
+                                  loop: true, 
+                                  breakLines: false,
+                                  cursorChar: "|",
+                                  html: true,
+                                  loopDelay: 5000
+                              }}
+                          />    
                     </div>
                     <div style={{paddingTop: 0, display: lg("key.language") === 'en' ? "block" : "none"}}>
-                    <TypeIt className="experience-text"                                              
-                            options={{
-                                strings: ["<b>My time at Vertex!</b>", "<b>Experiences...</b>"],
-                                speed: 150,
-                                loop: true, 
-                                breakLines: false,
-                                cursorChar: "|",
-                                html: true,
-                                loopDelay: 5000
-                            }}
-                        />    
-                    </div>                    
+                      <TypeIt className="custom-carousel-card-experience-text"                                              
+                              options={{
+                                  strings: ["<b>My time at Vertex!</b>", "<b>Experiences...</b>"],
+                                  speed: 150,
+                                  loop: true, 
+                                  breakLines: false,
+                                  cursorChar: "|",
+                                  html: true,
+                                  loopDelay: 5000
+                              }}
+                          />    
+                    </div> 
                   </div>  
                 </motion.div>  
               </div>          
-              <div className="d access-card">
-                <motion.div className="layer4" variants={topToInitial_2s}>
-                  <div className="item-x sectionn ec shadow-lg" id="contact-img" style={{background: `url(${Contact})`, backgroundPosition: "initial", filter: `grayscale(100%)`}}>
-                    {/* <p className="bottom-left">Soy Lennin Lemus</p> */}
+              <div className="carousel-item-contact">
+                <motion.div className="card-floating-education" variants={topToInitial_2s}>
+                  <div className="custom-carousel-item custom-carousel-card ec shadow-lg" id="contact-img" style={{background: `url(${Contact})`, backgroundPosition: "initial", filter: `grayscale(100%)`}}>
                     <div style={{paddingTop: 0, display: lg("key.language") === 'es' ? "block" : "none"}}>
-                    <TypeIt className="contact-text"                                              
+                    <TypeIt className="custom-carousel-card-contact-text"                                              
                             options={{
                                 strings: ["<b>¡CONTÁCTAME!</b>", "<b>¡HABLEMOS!</b>"],
                                 speed: 200,
@@ -261,7 +259,7 @@ export default function Carousel(){
                         />    
                     </div>
                     <div style={{paddingTop: 0, display: lg("key.language") === 'en' ? "block" : "none"}}>
-                    <TypeIt className="contact-text"                                              
+                    <TypeIt className="custom-carousel-card-contact-text"                                              
                             options={{
                                 strings: ["<b>CONTACT ME!</b>", "<b>LET'S TALK!</b>"],
                                 speed: 200,
@@ -294,6 +292,7 @@ export default function Carousel(){
         </div>
         <br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br />
+        
         {/* Navigation buttons only for mobile and tablet mode */}
         <div className="row 
           d-lg-none d-xl-block
@@ -317,15 +316,16 @@ export default function Carousel(){
               </div>
             </div>             
         </div>        
-        <br /><br />
       </div>    
 
+      <div className='mt-6'>
       {
-          currentIndexImage === 0 ? <ProfileSection /> 
-          : currentIndexImage === 1 ? <EducationSection /> 
-          : currentIndexImage === 2 ? <ExperienceSection /> 
-          : <ContactSection />
-        }
+        currentIndexImage === 0 ? <ProfileSection /> 
+        : currentIndexImage === 1 ? <EducationSection /> 
+        : currentIndexImage === 2 ? <ExperienceSection /> 
+        : <ContactSection />
+      }
+      </div>      
         
     </>
   )

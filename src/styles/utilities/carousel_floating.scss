@@ -1,0 +1,71 @@
+// Floating cards animation
+
+.card-floating {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+.floating-animation {  
+    animation-direction: alternate !important;
+    animation-iteration-count: infinite !important;
+}
+.card-floating-profile {
+    // Profile of first card fixed (no animated)
+    // @extend .floating-animation;
+}
+.card-floating-education {
+    transform: translateY(100px); /* movement to down */
+    animation: parallax2 8s linear infinite; 
+    @extend .floating-animation;
+}
+.card-floating-experience {
+    transform: translateY(-150px); /* movement to down */
+    animation: parallax3 10s linear infinite;
+    @extend .floating-animation;
+}
+.card-floating-contact {
+    transform: translateY(-200px); /* movement to down */
+    animation: parallax4 8s linear infinite;
+    @extend .floating-animation;
+}
+
+/* keyframes */
+@keyframes parallax1 {
+    0% { transform: translateY(-40px); }
+    100% { transform: translateY(40px); }
+}
+@keyframes parallax2 {
+    0% { transform: translateY(50px);  }
+    100% { transform: translateY(-50px); }
+}
+@keyframes parallax3 {
+    0% { transform: translateY(-40px);  }
+    100% { transform: translateY(40px); }
+}
+@keyframes parallax4 {
+    0% { transform: translateY(-70px); }
+    100% { transform: translateY(70px); }
+}
+
+// Dynamic left and right arrows buttons that actives with carousel index selected
+.buttons-0{
+    color: #464646;
+    background: #fff;
+    transition: 0.5s;
+}
+.buttons-1{
+    color: #fff;
+    background-color: #39ceb0;
+    transition: 0.5s;
+}
+.buttons-2{
+    color: #fff;
+    background-color: #780193;  
+    transition: 0.5s;
+}
+.buttons-3{
+    color: #fff;
+    background-color: #00bfd8;  
+    transition: 0.5s;
+}

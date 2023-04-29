@@ -55,7 +55,7 @@ export default function Experience() {
       <div className="row mb-10">
         <div className="col-12">
 
-          <div className="row mb-2 mt-5">
+          <div className="row mb-2">
               <span className="fs-3 text-white fw-bolder" >
                 <i className="fa-solid fa-briefcase me-2" />
                 <span dangerouslySetInnerHTML={{__html: lg('experience.vertex-title')}} />
@@ -63,10 +63,10 @@ export default function Experience() {
               <hr className="mt-2 text-white" />
             </div>
             <div className="row d-flex justify-content-center align-items-center" style={{}}>
-              <div className="col-12 col-sm-12 col-md-11 col-lg-11 card bg-transparent border-0 shadow-lg m-3 p-4" style={{borderRadius: 20, background: `url(${VertexBg})`, backgroundSize: "cover"}}>
+              <div className="col-12 col-sm-12 col-md-12 col-lg-12 card bg-transparent border-0 shadow-lg m-3 p-4" style={{borderRadius: 20, background: 'linear-gradient(to right, #501F68, #8C216E)'}}>
                   <div className="row d-flex justify-content-center align-items-center text-center text-lg-start">
                     <div className="col-12 col-sm-12 col-md-4 col-lg-2">
-                    <img className="education-logo" src={VertexLogoX} alt="" style={{height: "9rem"}} />
+                    <img className="education-logo-item" src={VertexLogoX} alt="" style={{height: "9rem"}} />
                     </div>
                     <div className="col-12 col-sm-12 col-md-8 col-lg-10">                    
                       <span className="fs-6 text-white">
@@ -99,7 +99,7 @@ export default function Experience() {
                     <div style={{ height: '400px' }} className='d-flex justify-content-center align-items-center'>
                       <div className="text-white pt-8">
                           <section className="col-12 col-sm-12 col-md-12 col-lg-12">
-                            <img className="education-logo" src={MedixlabLogo} alt="" style={{height: "6rem"}} />
+                            <img className="education-logo-item" src={MedixlabLogo} alt="" style={{height: "6rem"}} />
                           </section>                                              
                       </div> 
                     </div>
@@ -168,7 +168,7 @@ export default function Experience() {
                     <div style={{ height: '400px' }} className='d-flex justify-content-center align-items-center'>
                       <div className="container text-white pt-8">
                           <section className="col-12">
-                            <img className="education-logo" src={RoboxmakerLogo} alt="" style={{height: "5rem"}} />
+                            <img className="education-logo-item" src={RoboxmakerLogo} alt="" style={{height: "5rem"}} />
                           </section>                        
                           {/* List of robots for Tablet and Desktop Mode */}
                           <section className="col-12 d-none d-sm-block" style={{pointerEvents: "none"}}>
