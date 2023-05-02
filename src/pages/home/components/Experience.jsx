@@ -253,19 +253,19 @@ export default function Experience() {
                             <img className="" src={isMobile ? LineaRosaLogoPink :LineaRosaLogoWhite} alt="" style={{height: "6rem"}} />                            
                           </section>
                       </div>                
-                      <div className="position-absolute bottom-10 bottom-lg-10 bottom-xxl-50 end-xxl-3 end-25 end-lg-10 w-7 w-lg-8 layer2">
+                      <div className="position-absolute bottom-10 bottom-lg-10 bottom-xxl-50 end-xxl-3 end-25 end-lg-10 w-7 w-lg-8 card-floating-education">
                         <img src={isMobile ? PurpleCircle : PinkCircle} alt="" className="img-fluid"/>
                       </div>                      
-                      <div className="position-absolute bottom-10 bottom-lg-10 bottom-xxl-20 end-xxl-14 end-0 end-lg-10 w-20 w-lg-5 layer3">
+                      <div className="position-absolute bottom-10 bottom-lg-10 bottom-xxl-20 end-xxl-14 end-0 end-lg-10 w-20 w-lg-5 card-floating-contact">
                         <img src={LilacCircle} alt="" className="img-fluid"/>
                       </div>
-                      <div className="position-absolute bottom-10 bottom-lg-70 bottom-xxl-70 start-xxl-7 start-7 w-3 layer2
+                      <div className="position-absolute bottom-10 bottom-lg-70 bottom-xxl-70 start-xxl-7 start-7 w-3 card-floating-education
                       d-none d-sm-block
                       d-sm-none d-md-block
                       d-md-none d-lg-none">
                         <img src={WhitePoint} alt="" className="img-fluid"/>
                       </div>
-                      <div className="position-absolute bottom-10 bottom-lg-50 bottom-xxl-50 start-xxl-0 start-0 w-7 layer3
+                      <div className="position-absolute bottom-10 bottom-lg-50 bottom-xxl-50 start-xxl-0 start-0 w-7 card-floating-contact
                       d-none d-sm-block
                       d-sm-none d-md-block
                       d-md-none d-lg-none">
