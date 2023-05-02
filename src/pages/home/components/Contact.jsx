@@ -25,7 +25,7 @@ export default function Contact() {
             position: "top-right",
             closeButton: false,
             autoClose: 3000,
-            hideProgressBar: true,
+            hideProgressBar: false,
             closeOnClick: false,
             pauseOnHover: false,
             draggable: true,
@@ -33,7 +33,7 @@ export default function Contact() {
             className: "shadow-lg",
             style: {
                 backgroundColor: 
-                type === "success" ? "#6010C6" : "#f44336",
+                type === "success" ? "#00bfd8" : "#f44336",
                 borderRadius: 10, 
                 marginTop: 15,
                 marginLeft: 10,
@@ -217,7 +217,8 @@ export default function Contact() {
                     )}
                     {!isLoading && <span>{lg('contact-me.button-text')}</span>}
                   </button>
-                </form>              
+                </form>        
+                {/* <button type="button" id="form-button" onClick={() => ToastMessage("success")} className="btn btn-primary rounded-1 text-white" style={{backgroundColor: "#3C48C8"}}>Click Me!</button> */}
               </motion.div>
             </motion.div>         
           </motion.div>
