@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import TypeIt from "typeit-react";
 import '../../../hooks/init.js'
+import $ from 'jquery';
 
 import ProfileSection from './Profile.jsx'
 import EducationSection from './Education.jsx'
@@ -17,6 +18,7 @@ import {useMediaSm} from '../../../hooks/use_media_query.js';
 
 import SliderDefault from './SliderDefault.jsx';
 import SliderIOS from './SliderIOS.jsx';
+import { event } from 'jquery';
 
 export default function Carousel(){
 
@@ -34,6 +36,8 @@ export default function Carousel(){
     //   }, 5000);
     //   return () => clearInterval(interval);
     // }, []);
+
+    // const [fromButtons, setFromButtons] = useState(true)
     
     const handlePrev = (isMobile) => {
       const index = (currentIndexImage === 0) ? 3 : currentIndexImage - 1;
@@ -102,7 +106,7 @@ export default function Carousel(){
             
           }
         }
-    }
+    }    
 
     function ChangeGrayColors(index) {
       let imageNumber = index;
@@ -114,6 +118,24 @@ export default function Carousel(){
       document.body.style.background = imageNumber === 2 && `linear-gradient(180deg, #780193 0%, #e6008a 10%, #780193 15%)`;
       document.body.style.background = imageNumber === 3 && `linear-gradient(180deg, #6509C6 0%, #00A1CB 80%)`;
     };  
+
+    const handleClick = (event) => {
+      // stop event propagation
+      const div = event.currentTarget;
+      const clickPosition = event.clientX - div.getBoundingClientRect().left;
+      const halfWidth = div.offsetWidth / 2;
+                        
+        if (clickPosition < halfWidth) {
+          console.log('left slide'+ clickPosition);           
+          $('#prev-carousel-item').click();
+          // handlePrev();
+        }else if (clickPosition > halfWidth) {
+            console.log('right slide'+ clickPosition);
+            $('#next-carousel-item').click();
+            // handleNext();
+          }
+      
+    }    
 
   return (
     <>
@@ -141,11 +163,17 @@ export default function Carousel(){
           d-none d-sm-block
           d-md-none d-lg-block" initial="initial" whileInView="animate" viewport={{ once: true }}>
             <motion.div className="d-flex justify-content-center" variants={showPrevButton}>
+              {/* Real button that actives the animation and pass to the previous slide */}
               <button type="button" 
               className={`prev border-0 btn-circle d-flex justify-content-center align-items-center shadow-lg buttons-${currentIndexImageColor}`} 
               onClick={handlePrev} id="prev-carousel-item">
                   <i className="fa-solid fa-angle-left" />
               </button>
+              {/* Fake button that only shows some */}
+              {/* <button type="button" 
+              className={`border-0 btn-circle d-flex justify-content-center align-items-center shadow-lg buttons-${currentIndexImageColor}`}>
+                  <i className="fa-solid fa-angle-left"/>
+              </button>               */}
             </motion.div>
           </motion.div>
           <motion.div className="col-md-12 order-md-3 col-lg-8 order-lg-2" initial="initial" whileInView="animate" viewport={{ once: true }}>
@@ -167,6 +195,10 @@ export default function Carousel(){
               onClick={handleNext} id="next-carousel-item">
                     <i className="fa-solid fa-angle-right" />
               </button>
+              {/* <button type="button" 
+              className={`border-0 btn-circle d-flex justify-content-center align-items-center shadow-lg buttons-${currentIndexImageColor}`}>
+                    <i className="fa-solid fa-angle-right" />
+              </button> */}
             </motion.div>
           </motion.div>
         </div>

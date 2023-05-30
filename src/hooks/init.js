@@ -88,14 +88,11 @@ window.onload = function() {
 
   // Go to next carousel item with keyboard arrows
   window.addEventListener("keydown", function(event) {
-    var prev_carousel_item = document.getElementById("prev-carousel-item");
-    var next_carousel_item = document.getElementById("next-carousel-item");
-
     if (event.key === "ArrowLeft") { // Left arrow
-        prev_carousel_item.click();
+        $('#prev-carousel-item').click();
     }
     else if (event.key === "ArrowRight") { // Right arrow
-        next_carousel_item.click();
+        $('#next-carousel-item').click();
     }
   });  
 
