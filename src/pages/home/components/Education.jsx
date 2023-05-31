@@ -2,6 +2,7 @@ import React from 'react'
 import { useTranslation } from "react-i18next";
 import { motion } from 'framer-motion'
 
+import InsoLogo from '../../../assets/img/education/inso-logo.png'
 import EmpleatechLogo from '../../../assets/img/education/empleatech-logo.png'
 import EsfeLogo from '../../../assets/img/education/esfe-logo.png'
 import PlatziLogo from '../../../assets/img/education/platzi-logo.png'
@@ -48,31 +49,40 @@ export default function Education() {
             <hr className="mt-2 text-white" />
           </motion.div>
           <div className="row d-flex justify-content-around">
-            <motion.div className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
+            <motion.div variants={item_showHidden} className="col-lg card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
+              <div className="row d-flex justify-content-center text-center">
+                <img className="education-logo-item" src={InsoLogo} alt="" />
+                <motion.span className="fs-6 text-gray-700" variants={item_showHidden}>
+                {lg('education.inso-description')} <br />
+                <span className="text-gray-600">-2017, 2019</span>
+                </motion.span>
+              </div>                  
+            </motion.div> 
+            <motion.div variants={item_showHidden} className="col-lg card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center text-center">
                 <img className="education-logo-item" src={EmpleatechLogo} alt="" />
                 <motion.span className="fs-6 text-gray-700" variants={item_showHidden}>
                 {lg('education.empleatech-description')} <br />
-                -2019
+                <span className="text-gray-600">-2019</span>
                 </motion.span>
               </div>                  
             </motion.div>              
-            <motion.div variants={item_showHidden} className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
+            <motion.div variants={item_showHidden} className="col-lg card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center text-center">
                 <img className="education-logo-item" src={PlatziLogo} alt="" />
-                <span className="fs-6 text-gray-700">
+                <motion.span className="fs-6 text-gray-700" variants={item_showHidden}>
                 {lg('education.platzi-description')} <br />
-                -2020
-                </span>
+                <span className="text-gray-600">-2020</span>
+                </motion.span>
               </div>                  
             </motion.div>              
-            <motion.div variants={item_showHidden} className="col-12 col-sm-12 col-md-4 col-lg-3 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
+            <motion.div variants={item_showHidden} className="col-lg card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center text-center">
                 <img className="education-logo-item mb-2" src={EsfeLogo} alt="" />
-                <span className="fs-6 text-gray-700">
+                <motion.span className="fs-6 text-gray-700" variants={item_showHidden}>
                 {lg('education.esfe-description')} <br />
-                -2020, 2021
-                </span>
+                <span className="text-gray-600">-2020, 2021</span>
+                </motion.span>
               </div>                  
             </motion.div>
           </div>
@@ -85,19 +95,19 @@ export default function Education() {
             <hr className="mt-2 text-white" />
           </motion.div>
           <div className="row d-flex justify-content-center align-items-center">
-            <div className="col-12 col-sm-12 col-md-11 col-lg-11 card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
+            <motion.div variants={item_showHidden} className="col-lg card shadow-lg m-3 p-4" style={{borderRadius: 20}}>
               <div className="row d-flex justify-content-center align-items-center text-center text-lg-start">
                 <div className="col-12 col-sm-12 col-md-4 col-lg-2">
                 <img className="education-logo-item" src={CimatLogo} alt="" />
                 </div>
                 <motion.div className="col-12 col-sm-12 col-md-8 col-lg-10" variants={item_showHidden}>
-                  <span className="fs-6 text-gray-700">
+                  <motion.span className="fs-6 text-gray-700" variants={item_showHidden}>
                     <span dangerouslySetInnerHTML={{__html: lg('education.cimat-description')}} />
-                    -2019
-                  </span>
+                    <span className="text-gray-600">-2019</span>
+                  </motion.span>
                 </motion.div>              
               </div>                  
-            </div>              
+            </motion.div>              
           </div>       
 
           {/* </motion.div>

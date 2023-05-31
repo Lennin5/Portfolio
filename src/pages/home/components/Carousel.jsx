@@ -12,6 +12,8 @@ import ContactSection from './Contact.jsx'
 import {
   showPrevButton,
   showNextButton,
+  item_showHidden,
+  container_delay_childrens_1,  
 } from '../../../hooks/framer_motion_animations.js'
 
 import {useMediaSm} from '../../../hooks/use_media_query.js';

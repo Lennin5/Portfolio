@@ -62,7 +62,7 @@ export default function Experience() {
               <i className="fa-solid fa-envelope-open-text fs-5 me-2" />
               {lg("experience.letter-of-recommendation")}
             </button>
-            <div className="modal fade" id="letterOfReccommendation" tabIndex="-1" aria-labelledby="letterOfReccommendationLabel" aria-hidden="true">
+            <div className="modal fade mt-30 mt-md-5 mt-lg-5" id="letterOfReccommendation" tabIndex="-1" aria-labelledby="letterOfReccommendationLabel" aria-hidden="true">
               <div className="modal-dialog modal-dialog-scrollable">
                 <div className="modal-content">
                   <div className="modal-header border-0">
