@@ -19,6 +19,7 @@ import GithubLogo from '../../../assets/img/education/technologies/github.png'
 import SqlLogo from '../../../assets/img/education/technologies/sql.png'
 import PhotoshopLogo from '../../../assets/img/education/technologies/photoshop.png'
 import ResponsiveDesign from '../../../assets/img/education/technologies/responsive-design.png'
+import CSharp from '../../../assets/img/education/technologies/c-sharp.png'
 
 import RustLogo from '../../../assets/img/education/technologies/rust.png'
 import YewLogo from '../../../assets/img/education/technologies/yew.png'
@@ -151,8 +152,11 @@ export default function Education() {
               <img className="technology-logo-item" src={SqlLogo} alt="Html Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-              <img className="technology-logo-item" src={PhotoshopLogo} alt="Html Logo" />
+              <img className="technology-logo-item" src={CSharp} alt="Html Logo" />
             </motion.div>
+            {/* <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
+              <img className="technology-logo-item" src={PhotoshopLogo} alt="Html Logo" />
+            </motion.div> */}
           </div>
 
           <motion.div className="row mb-10 mt-5" variants={item_showHidden}>

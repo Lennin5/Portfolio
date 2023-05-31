@@ -29,6 +29,8 @@ import LineaRosaAcademy3Bg from '../../../assets/img/experience/linea-rosa-acade
 import LineaRosaAcademy4Bg from '../../../assets/img/experience/linea-rosa-academy-4-bg.png'
 import LineaRosaAcademyMobileBg from '../../../assets/img/experience/linea-rosa-academy-mobile.png'
 
+import LetterOfRecommendation from '../../../assets/img/experience/letter.jpg';
+
 import ListRobots from './ListRobots';
 
 import {useMediaSm} from '../../../hooks/use_media_query';
@@ -54,6 +56,25 @@ export default function Experience() {
     <>
       <div className="row mb-10">
         <div className="col-12">
+
+          <div className="col-12 mb-10 text-center">
+            <button type="button" className="btn btn-purple-blue text-white rounded-1" data-bs-toggle="modal" data-bs-target="#letterOfReccommendation">
+              <i className="fa-solid fa-envelope-open-text fs-5 me-2" />
+              {lg("experience.letter-of-recommendation")}
+            </button>
+            <div className="modal fade" id="letterOfReccommendation" tabIndex="-1" aria-labelledby="letterOfReccommendationLabel" aria-hidden="true">
+              <div className="modal-dialog modal-dialog-scrollable">
+                <div className="modal-content">
+                  <div className="modal-header border-0">
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body">
+                    <img src={LetterOfRecommendation} alt="" className="img-fluid" />                  
+                  </div>
+                </div>
+              </div>
+            </div>            
+          </div>             
 
           <div className="row mb-2">
               <span className="fs-3 text-white fw-bolder" >

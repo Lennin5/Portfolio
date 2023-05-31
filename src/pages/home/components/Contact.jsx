@@ -142,7 +142,7 @@ export default function Contact() {
                     </div>
                     <div className="mt-3">
                       <h4>
-                        <b>+503 7238 0568</b>
+                        <b>+503 7238 0568 <i className="fa-solid fa-arrow-up-right-from-square" /></b>
                       </h4>
                     </div>
                   </a>
@@ -172,7 +172,7 @@ export default function Contact() {
                     </div>
                     <div className="mt-3">
                       <h4>
-                        <b>Lennin5</b>
+                        <b>Lennin5 <i className="fa-solid fa-arrow-up-right-from-square" /></b>
                       </h4>
                     </div>
                   </a>    

@@ -17,8 +17,9 @@ export default function Profile() {
     <>    
     <div className="row text-center mb-10">
       {/* <div className="row text-center mb-10"> */}
-        <div className="col-12 mb-10">
+        <div className="col-12 mb-10">          
           <button className="btn btn-dark rounded-1" onClick={downloadPDF}>
+            <i className="fa-solid fa-download fs-5 me-2" />
             {lg("profile.download-cv")}
           </button>
         </div>       
