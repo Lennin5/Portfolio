@@ -12,12 +12,12 @@ import HtmlLogo from '../../../assets/img/education/technologies/html.png'
 import PythonLogo from '../../../assets/img/education/technologies/python.png'
 import ReactLogo from '../../../assets/img/education/technologies/react.png'
 import BootstrapLogo from '../../../assets/img/education/technologies/bootstrap.png'
-import FirebaseLogo from '../../../assets/img/education/technologies/firebase.png'
+import SqlLogo from '../../../assets/img/education/technologies/sql.png'
 
 
 import GitLogo from '../../../assets/img/education/technologies/git.png'
 import GithubLogo from '../../../assets/img/education/technologies/github.png'
-import SqlLogo from '../../../assets/img/education/technologies/sql.png'
+import FirebaseLogo from '../../../assets/img/education/technologies/firebase.png'
 import PhotoshopLogo from '../../../assets/img/education/technologies/photoshop.png'
 import ResponsiveDesign from '../../../assets/img/education/technologies/responsive-design.png'
 import CSharp from '../../../assets/img/education/technologies/c-sharp.png'
@@ -25,6 +25,7 @@ import CSharp from '../../../assets/img/education/technologies/c-sharp.png'
 import RustLogo from '../../../assets/img/education/technologies/rust.png'
 import YewLogo from '../../../assets/img/education/technologies/yew.png'
 import HasuraLogo from '../../../assets/img/education/technologies/hasura.png'
+import UnityLogo from '../../../assets/img/education/technologies/unity.png'
 
 import { 
   item_showHidden,
@@ -124,21 +125,21 @@ export default function Education() {
             <hr className="mt-2 text-white" />
           </motion.div>                  
           <div className="row d-flex justify-content-center">
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-0 mt-lg-0" variants={item_showHidden}>
                 <img className="technology-logo-item" src={HtmlLogo} alt="Html Logo" />
             </motion.div>
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-                <img className="technology-logo-item" src={PythonLogo} alt="Css Logo" />
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-0 mt-lg-0" variants={item_showHidden}>
+                <img className="technology-logo-item" src={PythonLogo} alt="Python Logo" />
             </motion.div>
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
                 <img className="technology-logo-item" src={ReactLogo} alt="React Logo" />
             </motion.div>
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-                <img className="technology-logo-item" src={BootstrapLogo} alt="Sql Logo" />
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
+                <img className="technology-logo-item" src={BootstrapLogo} alt="Bootstrap Logo" />
             </motion.div>     
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
                 <img className="technology-logo-item" src={FirebaseLogo} alt="Js Logo" />
-            </motion.div>                               
+            </motion.div>                                       
           </div>
 
           <motion.div className="row mb-10 mt-5" variants={item_showHidden}>
@@ -149,24 +150,21 @@ export default function Education() {
             <hr className="mt-2 text-white" />
           </motion.div>        
           <div className="row d-flex justify-content-center">            
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-              <img className="technology-logo-item" src={GithubLogo} alt="Html Logo" />
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-0 mt-lg-0" variants={item_showHidden}>
+              <img className="technology-logo-item" src={GithubLogo} alt="Github Logo" />
             </motion.div>
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-                <img className="technology-logo-item" src={GitLogo} alt="Html Logo" />
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-0 mt-lg-0" variants={item_showHidden}>
+                <img className="technology-logo-item" src={GitLogo} alt="Git Logo" />
             </motion.div>             
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-              <img className="technology-logo-item" src={ResponsiveDesign} alt="Html Logo" />
-            </motion.div>                        
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-              <img className="technology-logo-item" src={SqlLogo} alt="Html Logo" />
-            </motion.div>
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
-              <img className="technology-logo-item" src={CSharp} alt="Html Logo" />
-            </motion.div>
-            {/* <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2" variants={item_showHidden}>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
+              <img className="technology-logo-item" src={ResponsiveDesign} alt="Responsive Design Logo" />
+            </motion.div>        
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
+              <img className="technology-logo-item" src={SqlLogo} alt="SQL Logo" />
+            </motion.div>                                
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
               <img className="technology-logo-item" src={PhotoshopLogo} alt="Html Logo" />
-            </motion.div> */}
+            </motion.div>
           </div>
 
           <motion.div className="row mb-10 mt-5" variants={item_showHidden}>
@@ -180,15 +178,21 @@ export default function Education() {
             <hr className="mt-2 text-white" />
           </motion.div>           
           <div className="row d-flex justify-content-center">
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-3" variants={item_showHidden}>
-              <img className="technology-logo-item" src={RustLogo} alt="Html Logo" />
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-0 mt-lg-0" variants={item_showHidden}>
+              <img className="technology-logo-item" src={RustLogo} alt="Rust Logo" />
             </motion.div>
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-3" variants={item_showHidden}>
-              <img className="technology-logo-item" src={YewLogo} alt="Html Logo" />
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-0 mt-lg-0" variants={item_showHidden}>
+              <img className="technology-logo-item" src={YewLogo} alt="Yew Logo" />
             </motion.div>
-            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-3" variants={item_showHidden}>
-              <img className="technology-logo-item" src={HasuraLogo} alt="Html Logo" />
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
+              <img className="technology-logo-item" src={HasuraLogo} alt="Hasura Logo" />
             </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
+              <img className="technology-logo-item" src={UnityLogo} alt="Unity Logo" />
+            </motion.div>
+            <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
+              <img className="technology-logo-item" src={CSharp} alt="CSharp Logo" />
+            </motion.div>            
           </div>
 
         </motion.div>
