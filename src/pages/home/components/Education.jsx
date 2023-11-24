@@ -22,6 +22,11 @@ import PhotoshopLogo from '../../../assets/img/education/technologies/photoshop.
 import ResponsiveDesign from '../../../assets/img/education/technologies/responsive-design.png'
 import CSharp from '../../../assets/img/education/technologies/c-sharp.png'
 
+
+import VueLogo from '../../../assets/img/education/technologies/vue.png'
+import VuetifyLogo from '../../../assets/img/education/technologies/vuetify.png'
+import TailwindLogo from '../../../assets/img/education/technologies/tailwind.png'
+
 import RustLogo from '../../../assets/img/education/technologies/rust.png'
 import YewLogo from '../../../assets/img/education/technologies/yew.png'
 import HasuraLogo from '../../../assets/img/education/technologies/hasura.png'
@@ -179,13 +184,13 @@ export default function Education() {
           </motion.div>           
           <div className="row d-flex justify-content-center">
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-0 mt-lg-0" variants={item_showHidden}>
-              <img className="technology-logo-item" src={RustLogo} alt="Rust Logo" />
+              <img className="technology-logo-item" src={VueLogo} alt="Rust Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-0 mt-lg-0" variants={item_showHidden}>
-              <img className="technology-logo-item" src={YewLogo} alt="Yew Logo" />
+              <img className="technology-logo-item" src={VuetifyLogo} alt="Yew Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
-              <img className="technology-logo-item" src={HasuraLogo} alt="Hasura Logo" />
+              <img className="technology-logo-item" src={TailwindLogo} alt="Hasura Logo" />
             </motion.div>
             <motion.div className="col-6 col-sm-6 col-md-4 col-lg-2 mt-4 mt-lg-0" variants={item_showHidden}>
               <img className="technology-logo-item" src={UnityLogo} alt="Unity Logo" />
